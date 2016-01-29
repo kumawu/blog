@@ -1,0 +1,175 @@
+1. no-unused-vars: 变量未使用
+	- 检查变量定义却未使用的情况
+	- 不检查函数参数
+2. brace-style: 大括号样式
+	- 起始大括号与语句同行
+	- 允许单行无大括号
+	<pre>
+		if ()
+		{			// error
+			……
+		}
+		if () return;  // no error
+	</pre>
+3. comma-style: 逗号样式
+	- 逗号同行，且放在末尾
+	<pre>
+		var foo = 1
+		,      	 // error
+		bar = 2;
+		var foo1 = 1
+		,bar1 = 2;	//error
+	</pre>
+4. consistent-this: 为this赋值
+	- 只能将this赋值给that
+5. curly: 大括号的使用
+	- 单行表达式不需要大括号
+	- 对于if、else等，只有一行的代码块也无需加大括号
+	<pre>
+		if (lock) { return; }	// error
+		if (lock) {	// error
+			return;	
+		}
+	</pre>
+6. dot-location: “.”的位置
+	- “.”在换行使用时放在行首
+	<pre>
+		var a = universe.	// error
+        			galaxy;
+	</pre>
+7. eqeqeq: 等于的判断
+	- 尽量使用===和!==
+8. guard-for-in: for-in的用法
+	- 正确使用方式如下
+	<pre>
+		for (key in foo) {
+		    if ({}.hasOwnProperty.call(foo, key)) {
+		        doSomething(key);
+		    }
+		}
+	</pre>
+9. indent: 缩进
+	- 缩进采用4空格
+	<pre>
+		switch(a){
+		    case "a":
+		        break;
+		    case "b":
+		        break;
+		}
+	</pre>
+10. linebreak-style: 换行方式
+	- 采用unix下的换行符 \n
+	<pre>
+	   var a = 'a', // \n
+	   b = 'b'; // \n
+	   // \n
+	   function foo(params) {// \n
+	   		// do stuff \n
+	   }// \n
+	</pre>
+11. max-depth: 嵌套层数
+	- 嵌套最多三层
+	<pre>
+		function foo() {
+		  for (;;) {
+		    if (true) {
+		      if (true) {
+				  if(true){  // error
+				  }
+		      }
+		    }
+		  }
+		}
+	</pre>
+12. max-nested-callbacks: 形参回调层级
+	- 形参最多回调3级
+	<pre>
+		foo(function () {
+			bar(function () {
+		   		baz(function() {
+		      		qux(function () { // error
+		         	});
+		      });
+		   });
+		});
+	</pre>
+13. max-statements: 函数内命令条数
+	- 最多20条命令
+14. no-lonely-if: 不允许独立if语句
+	- else内又有if，则用else if语句
+	<pre>
+		if (foo) {
+		    // ...
+		} else {
+		    if (bar) {	// error
+		        // ...
+		    }
+		}
+	</pre>
+15. no-multiple-empty-lines: 最大空行数
+	- 只允许最多一个空行
+16. no-self-compare: 不允许自己比自己
+17. no-use-before-define: 使用之前必须定义, 函数除外
+	- 若是全局浏览器默认对象，比如alert, window等，需要在代码第一行写如下内容
+	<pre>
+		/* global window: false */
+		// 注意，此时相当于定义了window，故若你未使用则会因为定义了却未用而报错
+	</pre>
+18. operator-assignment: 操作符简写
+	- 操作符尽量简写
+	<pre>
+		x = x + y;  // error
+		x = y * x;  // error
+	</pre>
+19. operator-linebreak: 操作符放在行尾
+	- 跨行表达式时，操作符放在后面
+	<pre>
+		foo = 1
+      		   + 2;	// error
+	</pre>
+20. padded-blocks: if语句中的空行
+	- if语句后面不能有空行
+	<pre>
+		if (a) {
+		
+		    b();  // error
+		}
+	</pre>
+21. quote-props: 属性引号
+	- 对象尽量不适用引号
+	<pre>
+		var object2 = {
+		    "property": true   // error
+		};
+	</pre>
+22. semi: 必须有分号
+23. space-in-parens: 括号中的空格
+	- 括号前后没有空格
+	<pre>
+		(function () { return 'bar'; }());
+		( function () { return 'bar'; }() ); // error
+	</pre>
+24. wrap-iife: iife必须封装在外面
+	- 正确写法如下
+	<pre>
+		var x = (function () { return { y: 1 };})();
+	</pre>
+25. wrap-regex: 正则表达式需要封装
+	- 正确写法如下
+	<pre>
+		function a() {
+		    return (/foo/).test("bar");
+		}
+	</pre>
+26. react/jsx-no-duplicate-props: 不允许重复的属性
+27. react/jsx-no-undef: 组件使用前必须定义
+28. react/jsx-uses-react: react参数不可定义为其他变量
+29. react/jsx-uses-vars: 定义的参数必须使用
+30. react/no-did-mount-set-state: 不允许在didMount内设置状态
+31. react/no-did-update-set-state: 不允许在didUpdate内设置状态
+32. react/no-multi-comp: 每个文件一个组件
+33. react/no-unknown-property: 属性必须被react支持
+34. react/prop-types: propTypes必须写
+35. react/self-closing-comp: 组件必须闭合
+36. react/wrap-multilines: 组件返回可多行
