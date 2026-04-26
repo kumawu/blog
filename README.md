@@ -13,7 +13,7 @@ A 3-part essay series running from a quantum-physics metaphor (Wheeler's delayed
 |---|---|---|---|
 | 0 | Index · 索引 | [去中心化社会三部曲——索引](./去中心化社会三部曲——索引.md) | [Decentralized Society Trilogy — Index](./Decentralized-Society-Trilogy-Index.md) |
 | 1 | Ontology / Why · 本体论 / 为什么 | [当下的观察决定过去——从惠勒延迟选择到去中心化社会](./当下的观察决定过去——从惠勒延迟选择到去中心化社会.md) | [Observation Now Decides the Past](./Observation-Now-Decides-the-Past.md) |
-| 2 | Methodology / How it lands · 方法论 / 怎么落 | [分发观察权之后——去中心化在四个场景里的形状](./分发观察权之后——去中心化在四个场景里的形状.md) | [After Distributing Observation Rights](./Distributing-Observation-Rights.md) |
+| 2 | Methodology / How it lands · 方法论 / 怎么落 | [分发观察权之后——去中心化在六个场景里的形状](./分发观察权之后——去中心化在六个场景里的形状.md) | [After Distributing Observation Rights](./Distributing-Observation-Rights.md) |
 | 3 | Endgame / Why necessary in the AI era · 终局论 / 在 AI 时代为什么必须 | [AI 接管执行之后——一个新的基础社会架构](./AI接管执行之后——一个新的基础社会架构.md) | [After AI Takes Over Execution](./After-AI-Takes-Over-Execution.md) |
 
 > **Reading order recommendation**: read in order 1 → 2 → 3 for the full argument; the index page (0) gives the through-line at a glance.  

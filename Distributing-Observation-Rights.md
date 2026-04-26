@@ -2,7 +2,7 @@
 
 Author: @v5ria WK
 
-> English · [中文](./分发观察权之后——去中心化在四个场景里的形状.md)  
+> English · [中文](./分发观察权之后——去中心化在六个场景里的形状.md)  
 > "Decentralized Society Trilogy" · Part 2 · Methodology / How It Lands  
 > Series index: [Decentralized Society Trilogy — Index](./Decentralized-Society-Trilogy-Index.md)  
 > Previous: [Observation Now Decides the Past — From Wheeler's Delayed Choice to a Decentralized Society](./Observation-Now-Decides-the-Past.md) | Next: [After AI Takes Over Execution — A New Basic Social Architecture](./After-AI-Takes-Over-Execution.md)
