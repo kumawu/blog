@@ -2,6 +2,8 @@
 
 Author: @v5ria WK
 
+> 中文 · [English](./After-One-Outproduces-Five-Three-Moves-of-the-Middle.md)
+
 用 AI 三天做完了一个本来需要五个人做一个多月的项目。
 
 然后被人以"考勤问题"为由投诉了。
