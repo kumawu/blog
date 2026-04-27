@@ -35,6 +35,7 @@ A 3-part essay series running from a quantum-physics metaphor (Wheeler's delayed
 
 | 中文 | English | Notes · 备注 |
 |---|---|---|
+| [AI 让一个人顶五个人之后——中层的三种动作](./AI让一个人顶五个人之后——中层的三种动作.md) | _(中文 only)_ | 借 Robert Dilts 的"中层三击"，复盘 AI 时代高产个体被中层定义的一次事件 |
 | [前端工作质量](./前端工作质量.md) | _(中文 only)_ | — |
 | [如何做好一次晋升准备](./如何做好一次晋升准备.md) | _(中文 only)_ | — |
 | [微信团队分析](./微信团队分析.md) | _(中文 only)_ | — |
