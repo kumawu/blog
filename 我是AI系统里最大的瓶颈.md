@@ -2,6 +2,8 @@
 
 Author: @v5ria WK
 
+> 中文 · [English](./I-Am-the-Biggest-Bottleneck-in-the-AI-System.md)
+
 最近和朋友聊天，说了一句话：**我现在绝对自己就是阻碍。**
 
 说出来有点讽刺，但越想越觉得是真的。
