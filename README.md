@@ -27,6 +27,7 @@ A 3-part essay series running from a quantum-physics metaphor (Wheeler's delayed
 |---|---|---|
 | [我是 AI 系统里最大的瓶颈](./我是AI系统里最大的瓶颈.md) | _(中文 only)_ | 当 Agent 越来越强，人在 AI 系统里慢慢成了瓶颈本身 |
 | [如何让 AI 真正自主运转](./如何让AI真正自主运转.md) | _(中文 only)_ | 给 AI 设计可自迭代任务的几条原则 |
+| [别为人设计 AI 时代的工作流——七条新原则](./别为人设计AI时代的工作流——七条新原则.md) | [Stop Designing AI-Era Workflows for Humans — Seven New Principles](./Stop-Designing-AI-Era-Workflows-for-Humans.md) | 推翻人形流程、结果导向、Harness、24 小时、评估、并行 agent、FDE |
 | [ML](./ML.md) | _(中文 only)_ | — |
 
 ---
