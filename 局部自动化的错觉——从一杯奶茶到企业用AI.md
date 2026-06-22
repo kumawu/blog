@@ -8,8 +8,7 @@ Author: @v5ria WK
 
 等的时候我环顾了一圈，拍了张照片。
 
-![<img width="5712" height="3213" alt="IMG_7241" src="https://github.com/user-attachments/assets/5da8c8f8-53ff-44df-ab67-34f77ed961f8" />
-][cover]
+![奶茶店吧台后只剩一名店员][cover]
 
 > 照片：吧台后只剩一名店员，从摇茶、定量出料到封口，整条线靠他一个人串起来。
 
@@ -116,5 +115,4 @@ Author: @v5ria WK
 
 大多数企业现在做的，是给手工流水线装上越来越贵的机器。而真正的机会，是把那条传送带本身造出来——然后把人，从两台机器之间那个搬运工的位置上，请下来。
 
-<!-- 图片引用：请把那张奶茶店吧台的照片放到下面这个路径 -->
-[cover]: ./assets/local-automation/cover.jpg
+[cover]: https://github.com/user-attachments/assets/5da8c8f8-53ff-44df-ab67-34f77ed961f8
