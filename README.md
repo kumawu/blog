@@ -26,7 +26,7 @@ A 3-part essay series running from a quantum-physics metaphor (Wheeler's delayed
 | 中文 | English | Notes · 备注 |
 |---|---|---|
 | [我是 AI 系统里最大的瓶颈](./我是AI系统里最大的瓶颈.md) | _(中文 only)_ | 当 Agent 越来越强，人在 AI 系统里慢慢成了瓶颈本身 |
-| [局部自动化的错觉——从一杯奶茶到企业用 AI](./局部自动化的错觉——从一杯奶茶到企业用AI.md) | _(中文 only)_ | 从一家奶茶店出发：每个环节都自动化，却仍靠人工串联，整体效率为何没提升 |
+| [局部自动化的错觉——从一杯奶茶到企业用 AI](./局部自动化的错觉——从一杯奶茶到企业用AI.md) | [The Illusion of Local Automation — From a Cup of Milk Tea to How Companies Use AI](./The-Illusion-of-Local-Automation.md) | 从一家奶茶店出发：每个环节都自动化，却仍靠人工串联，整体效率为何没提升 |
 | [如何让 AI 真正自主运转](./如何让AI真正自主运转.md) | _(中文 only)_ | 给 AI 设计可自迭代任务的几条原则 |
 | [别为人设计 AI 时代的工作流——七条新原则](./别为人设计AI时代的工作流——七条新原则.md) | [Stop Designing AI-Era Workflows for Humans — Seven New Principles](./Stop-Designing-AI-Era-Workflows-for-Humans.md) | 推翻人形流程、结果导向、Harness、24 小时、评估、并行 agent、FDE |
 | [ML](./ML.md) | _(中文 only)_ | — |
