@@ -8,7 +8,8 @@ Author: @v5ria WK
 
 等的时候我环顾了一圈，拍了张照片。
 
-![][cover]
+![<img width="5712" height="3213" alt="IMG_7241" src="https://github.com/user-attachments/assets/5da8c8f8-53ff-44df-ab67-34f77ed961f8" />
+][cover]
 
 > 照片：吧台后只剩一名店员，从摇茶、定量出料到封口，整条线靠他一个人串起来。
 
