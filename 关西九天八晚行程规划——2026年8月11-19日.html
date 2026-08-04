@@ -1,0 +1,1275 @@
+<title>关西九天八晚 · 2026.08.11–19</title>
+
+<style>
+  :root {
+    --paper:      #ECEDE9;
+    --card:       #F6F7F4;
+    --ink:        #17191A;
+    --ink-2:      #4A4F50;
+    --ink-3:      #797E7D;
+    --rule:       #D3D6D0;
+    --rule-soft:  #E2E4DF;
+
+    --l-air:  #2B5D8F;
+    --l-osa:  #BE3F2C;
+    --l-kyo:  #7C3944;
+    --l-kib:  #2E6B51;
+    --l-nar:  #8A6A2E;
+    --ember:  #C2691A;
+    --on-line:#FFFFFF;
+
+    --flag:   #BE3F2C;
+    --flag-bg:#F7E6E2;
+
+    --font-sans: "PingFang SC", "HarmonyOS Sans SC", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-cond: "Roboto Condensed", "Helvetica Neue Condensed", "Arial Narrow", "DIN Alternate", var(--font-sans);
+    --font-jp:   "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "MS Gothic", var(--font-sans);
+    --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+    --wrap: 40rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:     #121415;
+      --card:      #1B1E1F;
+      --ink:       #E7E8E4;
+      --ink-2:     #A9ADAB;
+      --ink-3:     #7C8180;
+      --rule:      #2E3233;
+      --rule-soft: #242829;
+
+      --l-air: #6FA3D2;
+      --l-osa: #E4705C;
+      --l-kyo: #C1808C;
+      --l-kib: #5FA684;
+      --l-nar: #C2A263;
+      --ember: #E39A4B;
+      --on-line: #101213;
+
+      --flag:    #E4705C;
+      --flag-bg: #2B1E1C;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:     #121415;
+    --card:      #1B1E1F;
+    --ink:       #E7E8E4;
+    --ink-2:     #A9ADAB;
+    --ink-3:     #7C8180;
+    --rule:      #2E3233;
+    --rule-soft: #242829;
+    --l-air: #6FA3D2;
+    --l-osa: #E4705C;
+    --l-kyo: #C1808C;
+    --l-kib: #5FA684;
+    --l-nar: #C2A263;
+    --ember: #E39A4B;
+    --on-line: #101213;
+    --flag:    #E4705C;
+    --flag-bg: #2B1E1C;
+  }
+
+  :root[data-theme="light"] {
+    --paper:     #ECEDE9;
+    --card:      #F6F7F4;
+    --ink:       #17191A;
+    --ink-2:     #4A4F50;
+    --ink-3:     #797E7D;
+    --rule:      #D3D6D0;
+    --rule-soft: #E2E4DF;
+    --l-air: #2B5D8F;
+    --l-osa: #BE3F2C;
+    --l-kyo: #7C3944;
+    --l-kib: #2E6B51;
+    --l-nar: #8A6A2E;
+    --ember: #C2691A;
+    --on-line: #FFFFFF;
+    --flag:    #BE3F2C;
+    --flag-bg: #F7E6E2;
+  }
+
+  * { box-sizing: border-box; }
+
+  main[id], section[id] { scroll-margin-top: 5.6rem; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.72;
+    -webkit-text-size-adjust: 100%;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .wrap {
+    max-width: var(--wrap);
+    margin: 0 auto;
+    padding: 0 1.15rem;
+  }
+
+  /* ---------- station board header ---------- */
+
+  .board {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .board-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .7rem 0 .55rem;
+  }
+
+  .board-title {
+    font-size: .92rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    margin: 0;
+  }
+
+  .board-dates {
+    font-family: var(--font-cond);
+    font-size: .78rem;
+    letter-spacing: .09em;
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+
+  .chips {
+    display: flex;
+    gap: .3rem;
+    overflow-x: auto;
+    padding: 0 1.15rem .6rem;
+    max-width: var(--wrap);
+    margin: 0 auto;
+    scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+
+  .chip {
+    flex: 0 0 auto;
+    font-family: var(--font-cond);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    padding: .22rem .55rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-3);
+    background: transparent;
+    text-decoration: none;
+    transition: color .18s, border-color .18s, background-color .18s;
+  }
+  .chip:hover { color: var(--ink); }
+  .chip[aria-current="true"] {
+    color: var(--paper);
+    background: var(--line, var(--ink));
+    border-color: var(--line, var(--ink));
+  }
+  .chip:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  /* ---------- masthead ---------- */
+
+  .masthead { padding: 2.6rem 0 1.9rem; }
+
+  .masthead h1 {
+    font-size: clamp(1.85rem, 8vw, 2.5rem);
+    line-height: 1.18;
+    letter-spacing: -.015em;
+    margin: 0 0 .7rem;
+    text-wrap: balance;
+  }
+
+  .masthead .route {
+    font-family: var(--font-cond);
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 1.2rem;
+  }
+
+  .masthead .lede {
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 34rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem .9rem;
+    margin-top: 1.4rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--rule);
+  }
+  .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: .38rem;
+    font-size: .76rem;
+    color: var(--ink-3);
+    letter-spacing: .02em;
+  }
+  .legend i {
+    width: 1.1rem;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--line);
+  }
+
+  /* ---------- sections ---------- */
+
+  section { padding-top: 1.6rem; }
+
+  .eyebrow {
+    font-family: var(--font-cond);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 .55rem;
+  }
+
+  h2 {
+    font-size: 1.28rem;
+    line-height: 1.35;
+    letter-spacing: -.01em;
+    margin: 0 0 .9rem;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 1.5rem 0 .5rem;
+    letter-spacing: -.005em;
+  }
+
+  p { margin: 0 0 .85rem; }
+  p:last-child { margin-bottom: 0; }
+
+  a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: currentColor; }
+  a:focus-visible { outline: 2px solid var(--flag); outline-offset: 2px; border-radius: 1px; }
+
+  strong { font-weight: 700; }
+  em { font-style: normal; color: var(--flag); font-weight: 600; }
+
+  /* ---------- urgent block ---------- */
+
+  .urgent {
+    background: var(--flag-bg);
+    border: 1px solid var(--rule);
+    border-color: color-mix(in srgb, var(--flag) 35%, transparent);
+    border-radius: 3px;
+    padding: 1.05rem 1.1rem;
+  }
+
+  .urgent .eyebrow { color: var(--flag); margin-bottom: .7rem; }
+
+  .urgent ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+  }
+
+  .urgent li {
+    display: grid;
+    grid-template-columns: 1.45rem 1fr;
+    gap: .55rem;
+    font-size: .93rem;
+    line-height: 1.6;
+  }
+
+  .urgent li b {
+    font-family: var(--font-cond);
+    color: var(--flag);
+    font-size: .95rem;
+    letter-spacing: .04em;
+  }
+
+  .urgent li span { color: var(--ink-2); display: block; font-size: .86rem; }
+  .urgent li span b { font-family: inherit; letter-spacing: 0; }
+
+  /* ---------- finding cards ---------- */
+
+  .finding {
+    background: var(--card);
+    border: 1px solid var(--rule-soft);
+    border-radius: 3px;
+    padding: 1.05rem 1.1rem;
+    margin-bottom: .8rem;
+  }
+  .finding > :last-child { margin-bottom: 0; }
+  .finding h3 { margin-top: 0; }
+
+  /* ---------- data tables ---------- */
+
+  .scroll { overflow-x: auto; margin: .9rem 0; }
+  .scroll:last-child { margin-bottom: 0; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: .85rem;
+    min-width: 20rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: .48rem .7rem .48rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  th {
+    font-family: var(--font-cond);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-bottom-color: var(--rule);
+    white-space: nowrap;
+  }
+  td:last-child, th:last-child { padding-right: 0; }
+  tbody tr:last-child td { border-bottom: none; }
+  .num { font-family: var(--font-cond); white-space: nowrap; }
+
+  /* ---------- day card ---------- */
+
+  .day {
+    background: var(--card);
+    border: 1px solid var(--rule-soft);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: .9rem;
+    scroll-margin-top: 5.6rem;
+  }
+
+  .day-head {
+    background: var(--line);
+    color: var(--on-line);
+    padding: .68rem 1.05rem .72rem;
+    display: flex;
+    align-items: baseline;
+    gap: .6rem;
+    flex-wrap: wrap;
+  }
+
+  .day-no {
+    font-family: var(--font-cond);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    opacity: .82;
+  }
+
+  .day-date {
+    font-family: var(--font-cond);
+    font-size: 1.02rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+  }
+
+  .day-name {
+    font-size: .9rem;
+    font-weight: 600;
+    margin-left: auto;
+  }
+
+  .day-body { padding: .95rem 1.05rem 1.1rem; }
+
+  /* ---------- timetable ---------- */
+
+  .tt { display: flex; flex-direction: column; }
+
+  .tt-row {
+    display: grid;
+    grid-template-columns: 3.1rem 1fr;
+    column-gap: .85rem;
+    position: relative;
+    padding-bottom: .85rem;
+  }
+  .tt-row:last-child { padding-bottom: 0; }
+
+  .tt-row::before {
+    content: "";
+    position: absolute;
+    left: calc(3.1rem + .425rem);
+    top: .62rem;
+    bottom: 0;
+    width: 1px;
+    background: var(--rule);
+    transform: translateX(-50%);
+  }
+  .tt-row:last-child::before { display: none; }
+
+  .tt-row::after {
+    content: "";
+    position: absolute;
+    left: calc(3.1rem + .425rem);
+    top: .5rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--line);
+    transform: translateX(-50%);
+  }
+
+  .tt-time {
+    font-family: var(--font-cond);
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--ink-2);
+    padding-top: .06rem;
+    text-align: right;
+  }
+
+  .tt-what { font-size: .92rem; line-height: 1.62; }
+  .tt-what b { font-weight: 700; }
+  .tt-note {
+    display: block;
+    font-size: .82rem;
+    color: var(--ink-3);
+    line-height: 1.6;
+    margin-top: .1rem;
+  }
+
+  .tt-row.hot .tt-time { color: var(--line); }
+  .tt-row.hot .tt-what > b:first-child { color: var(--line); }
+
+  /* ---------- callouts ---------- */
+
+  .warn {
+    margin-top: 1rem;
+    padding: .7rem .85rem;
+    border-left: 3px solid var(--flag);
+    background: var(--flag-bg);
+    background: color-mix(in srgb, var(--flag) 7%, transparent);
+    font-size: .86rem;
+    line-height: 1.62;
+    border-radius: 0 2px 2px 0;
+  }
+  .warn b { color: var(--flag); }
+  .warn > :last-child { margin-bottom: 0; }
+
+  .tip {
+    margin-top: 1rem;
+    padding: .7rem .85rem;
+    border-left: 3px solid var(--rule);
+    font-size: .86rem;
+    line-height: 1.62;
+    color: var(--ink-2);
+  }
+  .tip b { color: var(--ink); }
+
+  /* ---------- shop card ---------- */
+
+  .shop {
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: .75rem .85rem;
+    margin-top: .7rem;
+    font-size: .86rem;
+    line-height: 1.6;
+  }
+  .shop b { display: block; font-size: .93rem; margin-bottom: .15rem; }
+  .shop dl {
+    margin: .4rem 0 0;
+    display: grid;
+    grid-template-columns: 3.4rem 1fr;
+    gap: .12rem .6rem;
+    font-size: .82rem;
+  }
+  .shop dt { color: var(--ink-3); }
+  .shop dd { margin: 0; }
+
+  /* ---------- japanese phrase, tap to copy ---------- */
+
+  .phrases { display: flex; flex-direction: column; gap: .5rem; margin-top: .9rem; }
+
+  .phrase {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: .6rem .75rem;
+    cursor: pointer;
+    color: inherit;
+    position: relative;
+    transition: border-color .18s;
+  }
+  .phrase:hover { border-color: var(--ink-3); }
+  .phrase:focus-visible { outline: 2px solid var(--flag); outline-offset: 2px; }
+
+  .phrase .jp {
+    display: block;
+    font-family: var(--font-jp);
+    font-size: .92rem;
+    line-height: 1.55;
+    padding-right: 3.2rem;
+  }
+  .phrase .cn {
+    display: block;
+    font-size: .78rem;
+    color: var(--ink-3);
+    margin-top: .18rem;
+  }
+  .phrase .copy {
+    position: absolute;
+    top: .6rem;
+    right: .75rem;
+    font-family: var(--font-cond);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .phrase.copied .copy { color: var(--l-kib); }
+
+  /* ---------- okuribi sequence ---------- */
+
+  .okuribi {
+    margin-top: 1rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: .9rem .85rem;
+    background: var(--paper);
+  }
+
+  .okuribi ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .42rem;
+  }
+
+  .okuribi li {
+    display: grid;
+    grid-template-columns: 3.1rem 1.2rem 1fr;
+    align-items: center;
+    gap: .55rem;
+    font-size: .88rem;
+  }
+
+  .okuribi .t {
+    font-family: var(--font-cond);
+    font-weight: 700;
+    font-size: .84rem;
+    letter-spacing: .04em;
+    color: var(--ink-3);
+    text-align: right;
+    transition: color .5s ease;
+  }
+
+  .okuribi .fire {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--rule);
+    justify-self: center;
+    transition: background-color .55s ease, box-shadow .55s ease;
+  }
+
+  .okuribi .mt { color: var(--ink-2); transition: color .5s ease; }
+  .okuribi .mt small { color: var(--ink-3); font-size: .8em; }
+
+  .okuribi.lit .t   { color: var(--ember); }
+  .okuribi.lit .fire{ background: var(--ember); box-shadow: 0 0 9px 1px color-mix(in srgb, var(--ember) 65%, transparent); }
+  .okuribi.lit .mt  { color: var(--ink); }
+
+  .okuribi.lit li:nth-child(1) .fire, .okuribi.lit li:nth-child(1) .t, .okuribi.lit li:nth-child(1) .mt { transition-delay: .10s; }
+  .okuribi.lit li:nth-child(2) .fire, .okuribi.lit li:nth-child(2) .t, .okuribi.lit li:nth-child(2) .mt { transition-delay: .55s; }
+  .okuribi.lit li:nth-child(3) .fire, .okuribi.lit li:nth-child(3) .t, .okuribi.lit li:nth-child(3) .mt { transition-delay: 1.00s; }
+  .okuribi.lit li:nth-child(4) .fire, .okuribi.lit li:nth-child(4) .t, .okuribi.lit li:nth-child(4) .mt { transition-delay: 1.45s; }
+  .okuribi.lit li:nth-child(5) .fire, .okuribi.lit li:nth-child(5) .t, .okuribi.lit li:nth-child(5) .mt { transition-delay: 1.90s; }
+
+  .okuribi-cap {
+    font-size: .78rem;
+    color: var(--ink-3);
+    margin: .7rem 0 0;
+    padding-top: .6rem;
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .okuribi .t, .okuribi .fire, .okuribi .mt { transition: none !important; transition-delay: 0s !important; }
+    * { scroll-behavior: auto !important; }
+  }
+
+  /* ---------- checklist ---------- */
+
+  .todo { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+
+  .todo li { border-bottom: 1px solid var(--rule-soft); }
+  .todo li:last-child { border-bottom: none; }
+
+  .todo label {
+    display: grid;
+    grid-template-columns: 1.1rem 1fr auto;
+    gap: .6rem;
+    align-items: baseline;
+    padding: .55rem 0;
+    cursor: pointer;
+    font-size: .89rem;
+    line-height: 1.55;
+  }
+
+  .todo input { margin: 0; accent-color: var(--l-kib); width: 1rem; height: 1rem; align-self: center; }
+
+  .todo .due {
+    font-family: var(--font-cond);
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+  .todo .due.now { color: var(--flag); font-weight: 700; }
+
+  .todo input:checked + .txt { color: var(--ink-3); text-decoration: line-through; text-decoration-thickness: 1px; }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    margin-top: 2.6rem;
+    padding: 1.6rem 0 3rem;
+    border-top: 1px solid var(--rule);
+    font-size: .8rem;
+    color: var(--ink-3);
+    line-height: 1.7;
+  }
+  footer ul { margin: .5rem 0 0; padding-left: 1.1rem; }
+  footer li { margin-bottom: .18rem; }
+
+  hr.div {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.4rem 0 0;
+  }
+</style>
+
+<header class="board">
+  <div class="wrap">
+    <div class="board-top">
+      <p class="board-title">关西九天八晚</p>
+      <p class="board-dates">2026.08.11 &ndash; 08.19</p>
+    </div>
+  </div>
+  <nav class="chips" aria-label="按天跳转">
+    <a class="chip" href="#top" style="--line: var(--ink)">速览</a>
+    <a class="chip" href="#d1" style="--line: var(--l-air)">D1</a>
+    <a class="chip" href="#d2" style="--line: var(--l-osa)">D2</a>
+    <a class="chip" href="#d3" style="--line: var(--l-osa)">D3</a>
+    <a class="chip" href="#d4" style="--line: var(--l-kyo)">D4</a>
+    <a class="chip" href="#d5" style="--line: var(--l-kyo)">D5</a>
+    <a class="chip" href="#d6" style="--line: var(--l-kyo)">D6</a>
+    <a class="chip" href="#d7" style="--line: var(--l-kib)">D7</a>
+    <a class="chip" href="#d8" style="--line: var(--l-nar)">D8</a>
+    <a class="chip" href="#d9" style="--line: var(--l-air)">D9</a>
+    <a class="chip" href="#memo" style="--line: var(--ink)">备忘</a>
+  </nav>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="masthead">
+    <p class="route">香港 → 关西 · 3 人同行 · 8 晚 9 天</p>
+    <h1>京都 · 大阪 · 奈良 · 宇治</h1>
+    <p class="lede">按 8/11&ndash;8/19 的日期骨架排的行程。这一周撞上山之日和盂兰盆，是日本全年最挤的一周，所以除了每天怎么走，这份还处理了三件原方案没算进去的事。</p>
+    <div class="legend">
+      <span style="--line: var(--l-air)"><i></i>机场 · 移动</span>
+      <span style="--line: var(--l-osa)"><i></i>大阪</span>
+      <span style="--line: var(--l-kyo)"><i></i>京都</span>
+      <span style="--line: var(--l-kib)"><i></i>贵船 · 山间</span>
+      <span style="--line: var(--l-nar)"><i></i>奈良 · 宇治</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="urgent">
+      <p class="eyebrow">距出发 7 天 · 今天就得订</p>
+      <ol>
+        <li><b>01</b><div>京都 8/14&ndash;8/18 住宿<span>尤其 <b>8/15、8/16</b>——盂兰盆 + 周末 + 送り火，京都全年最难订的两晚，价格会翻倍。</span></div></li>
+        <li><b>02</b><div>USJ 8/12 门票 + Express Pass<span>高峰日 EP 会提前售罄，售罄就只能排 120&ndash;180 分钟。</span></div></li>
+        <li><b>03</b><div>贵船川床 8/17 午餐<span>一般要求 <b>3 天前</b>预约，现在订还来得及，再晚就没位了。</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">三件会改行程的事</p>
+    <h2>先看这里，再看每天</h2>
+
+    <div class="finding">
+      <h3>一 · 8/16 那场「花火大会」，2026 年不存在</h3>
+      <p>关西的大型花火今年全挪走了：</p>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>花火大会</th><th>2026 日期</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>なにわ淀川花火（大阪）</td><td class="num">10/17</td><td>不再是 8 月</td></tr>
+            <tr><td>猪名川花火</td><td class="num">11/07</td><td>改为隔年举办</td></tr>
+            <tr><td>びわ湖大花火（滋贺）</td><td class="num">08/06</td><td>已经过了</td></tr>
+            <tr><td>宮津燈籠流し花火</td><td class="num">08/16</td><td>唯一当天的，但在日本海侧，离京都 2.5 小时</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><em>8/11&ndash;8/19 这九天，大阪和京都市区没有大型花火大会。</em>但 8/16 晚上京都有比花火更有分量的东西，见 <a href="#d6">Day 6</a>。</p>
+    </div>
+
+    <div class="finding">
+      <h3>二 · 这是日本全年最挤的一周</h3>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>日期</th><th>性质</th></tr></thead>
+          <tbody>
+            <tr><td class="num">8/11 二</td><td><b>山之日</b>，日本法定假日</td></tr>
+            <tr><td class="num">8/13 &ndash; 8/16</td><td><b>お盆（盂兰盆节）</b>，全国返乡潮</td></tr>
+            <tr><td class="num">8/15 &ndash; 8/16</td><td>周末 + 盂兰盆正日 + 京都送り火</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>连锁反应：USJ 热门项目 120&ndash;180 分钟；京都住宿翻倍；<strong>个人经营的小店、名店、以及镜片加工厂 8/13&ndash;8/16 多数放假</strong>（百货公司照常营业）。</p>
+    </div>
+
+    <div class="finding">
+      <h3>三 · 增永眼镜：镜片赶不上，建议只买镜架</h3>
+      <p>两家直营店都在梅田，正好在 8/13 的动线上。</p>
+
+      <div class="shop">
+        <b>MASUNAGA1905 KITTE大阪店</b>
+        <dl>
+          <dt>地址</dt><dd>大阪市北区梅田 3-2-2　KITTE大阪 3F　306 区（JR 大阪站直连）</dd>
+          <dt>时间</dt><dd class="num">11:00 &ndash; 20:00</dd>
+          <dt>电话</dt><dd><a href="tel:+81661477502">06-6147-7502</a></dd>
+        </dl>
+      </div>
+
+      <div class="shop">
+        <b>マスナガ1905 阪急三番街店</b>
+        <dl>
+          <dt>地址</dt><dd>大阪市北区芝田 1-1-3　阪急三番街（离 KITTE 走路 10 分钟）</dd>
+          <dt>时间</dt><dd>依商场营业时间</dd>
+        </dl>
+      </div>
+
+      <p style="margin-top:1rem"><strong>问题在于：8/13 下单，镜片大概率赶不上 8/19 走。</strong>8/13&ndash;8/16 日本镜片加工厂基本全线放假，最快 8/17 才开工，做完再寄，卡在出发线上太险。</p>
+
+      <div class="scroll">
+        <table>
+          <thead><tr><th>方案</th><th>做法</th><th>风险</th></tr></thead>
+          <tbody>
+            <tr><td><b>A 推荐</b></td><td>免税只买镜架带走，回来配片</td><td>零风险。省的本来就是镜架的钱</td></tr>
+            <tr><td>B</td><td>库存常规单光片 + 店内加工</td><td>度数常规有机会当天取，高度数散光没戏</td></tr>
+            <tr><td>C</td><td>做好后宅配到京都酒店</td><td>赌 8/17 开工后的速度，8/19 早上没到就麻烦</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip"><b>去之前准备好：</b>护照（免税必须，8 月仍是店内直接减税的老制度，改成离境退款是 2026/11/1 才开始）；<b>现有眼镜的度数和瞳距 PD 拍照存手机</b>——日本店重新验光要 30&ndash;60 分钟，还有语言成本。</div>
+
+      <p class="eyebrow" style="margin-top:1.3rem">点一下复制，给店员看</p>
+      <div class="phrases">
+        <button class="phrase" type="button" data-copy="度付きレンズを入れたいです。店内加工で即日仕上げは可能ですか？">
+          <span class="copy">复制</span>
+          <span class="jp">度付きレンズを入れたいです。店内加工で即日仕上げは可能ですか？</span>
+          <span class="cn">想配镜片，能店内加工当天取吗？</span>
+        </button>
+        <button class="phrase" type="button" data-copy="お盆期間のレンズ工場の休みで、納期はどのくらいかかりますか？">
+          <span class="copy">复制</span>
+          <span class="jp">お盆期間のレンズ工場の休みで、納期はどのくらいかかりますか？</span>
+          <span class="cn">お盆 期间镜片厂放假，交期大概多久？</span>
+        </button>
+        <button class="phrase" type="button" data-copy="無理でしたら、フレームのみ購入します。免税でお願いします。">
+          <span class="copy">复制</span>
+          <span class="jp">無理でしたら、フレームのみ購入します。免税でお願いします。</span>
+          <span class="cn">来不及的话我只买镜架，请办免税。</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="div" />
+
+  <section>
+    <p class="eyebrow" style="margin-top:1.6rem">逐日行程</p>
+
+    <!-- DAY 1 -->
+    <article class="day" id="d1" style="--line: var(--l-air)">
+      <div class="day-head">
+        <span class="day-no">DAY 01</span>
+        <span class="day-date">08.11 TUE</span>
+        <span class="day-name">香港 → 环球城</span>
+      </div>
+      <div class="day-body">
+        <div class="tt">
+          <div class="tt-row"><div class="tt-time">上午</div><div class="tt-what">跨境专车 → 香港机场<span class="tt-note">盂兰盆前一天 + 山之日，HKG 和 KIX 都会挤，起飞前 3.5 小时到。</span></div></div>
+          <div class="tt-row"><div class="tt-time">下午</div><div class="tt-what">抵达关西机场<span class="tt-note">入境排队 60&ndash;90 分钟是常态。<b>提前填好 Visit Japan Web</b>，过关能快很多。</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">傍晚</div><div class="tt-what"><b>KIX → 环球影城</b><span class="tt-note">机场利木津巴士直达ユニバーサルシティ，约 70 分钟／1,800 日元，到达层柜台现买不用预约。<b>末班较早，落地先去柜台确认。</b><br />兜底：JR 関空快速 → 西九条换 JRゆめ咲線，75&ndash;85 分钟／约 1,200 日元，收车更晚。</span></div></div>
+          <div class="tt-row"><div class="tt-time">晚上</div><div class="tt-what">入住 Oriental Hotel Universal City<span class="tt-note">出门就是 Universal CityWalk，晚餐在那儿解决，不用跑远。</span></div></div>
+        </div>
+        <div class="warn"><b>今晚必做</b>——确认明天 USJ 的开园时间（旺季常提前开园）、Express Pass 使用方式、以及「超级任天堂世界」的入场方式（区域整理券／确约券）。然后早睡，明天是全程最累的一天。</div>
+      </div>
+    </article>
+
+    <!-- DAY 2 -->
+    <article class="day" id="d2" style="--line: var(--l-osa)">
+      <div class="day-head">
+        <span class="day-no">DAY 02</span>
+        <span class="day-date">08.12 WED</span>
+        <span class="day-name">USJ 全日 → 难波</span>
+      </div>
+      <div class="day-body">
+        <div class="tt">
+          <div class="tt-row"><div class="tt-time">早</div><div class="tt-what">退房，行李寄存前台<span class="tt-note">晚上出园回来取，打车去难波 25&ndash;30 分钟／4,000&ndash;5,000 日元，3 人分摊比拖行李坐电车值。</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">开园<br />前 60′</div><div class="tt-what"><b>到闸机口排队</b><span class="tt-note">这一小时决定今天能玩几个项目。</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">开园</div><div class="tt-what"><b>直奔超级任天堂世界</b><span class="tt-note">先马力欧赛车，再耀西冒险 / 咚奇刚疯狂矿车。</span></div></div>
+          <div class="tt-row"><div class="tt-time">上午</div><div class="tt-what">Express Pass 优先保<span class="tt-note">哈利波特禁忌之旅 · 马力欧赛车 · 咚奇刚 · 蜘蛛侠</span></div></div>
+          <div class="tt-row"><div class="tt-time">12&ndash;16</div><div class="tt-what">最热最挤，走室内<span class="tt-note">蜘蛛侠、大白鲨、小黄人室内区；室外的挪到早晚。</span></div></div>
+          <div class="tt-row"><div class="tt-time">傍晚</div><div class="tt-what">哈利波特园区拍照<span class="tt-note">这个时段光线最好，魔杖互动也不用挤。</span></div></div>
+          <div class="tt-row"><div class="tt-time">晚上</div><div class="tt-what">夜间巡游 / 灯光秀 → 难波 checkin</div></div>
+        </div>
+        <div class="tip"><b>关于「请管家」</b>——中文代排/陪玩服务确实省事，但下单前问清三件事：① 是否含 Express Pass 本身（多数不含）② 能不能保证进任天堂世界 ③ 下雨或项目故障的退改规则。官方 VIP Tour 是另一个选择，贵但确定性最高。</div>
+        <div class="warn"><b>防暑，认真的</b>——园区几乎没有遮阳，8 月体感 38℃+。手持风扇、冷感毛巾、冰贴、防晒每 2 小时补一次、盐糖或宝矿力粉。园内有免费饮水处。<b>三个人互相盯着状态，谁头晕或者该出汗却不出汗了，立刻进室内。</b></div>
+        <div class="tip"><b>小技巧</b>——环球商店比园区早开门，发箍、魔杖可以先买好，不占玩的时间。</div>
+      </div>
+    </article>
+
+    <!-- DAY 3 -->
+    <article class="day" id="d3" style="--line: var(--l-osa)">
+      <div class="day-head">
+        <span class="day-no">DAY 03</span>
+        <span class="day-date">08.13 THU</span>
+        <span class="day-name">梅田配镜 + 买买买</span>
+      </div>
+      <div class="day-body">
+        <div class="tt">
+          <div class="tt-row hot"><div class="tt-time">11:00</div><div class="tt-what"><b>MASUNAGA1905 KITTE大阪店</b><span class="tt-note">JR 大阪站直连，11 点开门。挑镜架 → 问加工交期 → 按 <a href="#top">A/B/C 方案</a>决定。</span></div></div>
+          <div class="tt-row"><div class="tt-time">12:30</div><div class="tt-what">マスナガ1905 阪急三番街店<span class="tt-note">走路 10 分钟，款式和 KITTE 店不一样，值得再看一轮。</span></div></div>
+          <div class="tt-row"><div class="tt-time">13:00</div><div class="tt-what">梅田午餐<span class="tt-note">Grand Front / 阪急三番街地下</span></div></div>
+          <div class="tt-row"><div class="tt-time">14:00</div><div class="tt-what">梅田扫货<span class="tt-note">阪急百货 · 大丸梅田 · LUCUA · Yodobashi 梅田</span></div></div>
+          <div class="tt-row"><div class="tt-time">16:30</div><div class="tt-what">心斋桥<span class="tt-note">心斋桥筋商店街 → 大丸心斋桥 → 难波 PARCO → LOFT / Tokyu Hands<br />药妆：大国屋、松本清。<b>大阪药妆和电器确实比京都便宜，集中今天买完。</b></span></div></div>
+          <div class="tt-row"><div class="tt-time">18:30</div><div class="tt-what">道顿堀<span class="tt-note">章鱼烧、大阪烧、蟹道乐。お盆 期间人极多，热门店提前订或错峰到 20:30 后。</span></div></div>
+          <div class="tt-row"><div class="tt-time">20:30</div><div class="tt-what">梅田蓝天大厦 空中庭院展望台</div></div>
+        </div>
+        <div class="warn"><b>盂兰盆提醒</b>——百货公司正常营业，但个人经营的小店和名店可能休息。出门前用 Google Maps 逐个确认当天营业时间，别白跑。</div>
+        <div class="tip"><b>行李预警</b>——三个人 + 一天扫货，箱子会爆。要么今天在唐吉诃德买个空箱，要么明天用宅急便寄行李。</div>
+      </div>
+    </article>
+
+    <!-- DAY 4 -->
+    <article class="day" id="d4" style="--line: var(--l-kyo)">
+      <div class="day-head">
+        <span class="day-no">DAY 04</span>
+        <span class="day-date">08.14 FRI</span>
+        <span class="day-name">大阪 → 京都</span>
+      </div>
+      <div class="day-body">
+        <div class="tt">
+          <div class="tt-row"><div class="tt-time">上午</div><div class="tt-what">退房 → 京都<span class="tt-note"><b>JR 京都线新快速，大阪 → 京都 29 分钟／580 日元。</b><br />或用黑猫宅急便酒店→酒店（约 2,000&ndash;2,500 日元/件，前一天下午前寄，次日到）——买了一堆之后强烈建议。</span></div></div>
+          <div class="tt-row"><div class="tt-time">中午</div><div class="tt-what">京都站附近午餐，行李寄存酒店</div></div>
+          <div class="tt-row hot"><div class="tt-time">15:30</div><div class="tt-what"><b>伏见稻荷大社</b><span class="tt-note">下午 3&ndash;4 点后人明显少、光线也好。千本鸟居拍照；想看夜景就爬到「四つ辻」，单程约 40 分钟。</span></div></div>
+          <div class="tt-row"><div class="tt-time">18:30</div><div class="tt-what">祇园花见小路 + 白川巽桥<span class="tt-note">拍和服照最出片的一段。</span></div></div>
+          <div class="tt-row"><div class="tt-time">20:00</div><div class="tt-what">先斗町 / 木屋町 晚餐<span class="tt-note"><b>鸭川纳凉床</b>（5&ndash;9 月）正好赶上，要提前订。</span></div></div>
+        </div>
+        <div class="tip"><b>住哪里</b>——建议京都站附近或四条乌丸／河原町，这两处去岚山、贵船、奈良、机场都顺。3 个人建议直接找<b>三人间 / 町家和室</b>（比开两间便宜），或者<b>公寓式酒店（有洗衣机）</b>——9 天行程一定要洗衣服。</div>
+        <div class="tip"><b>和服还是浴衣</b>——8 月穿全套和服会热到崩溃，<b>建议改浴衣</b>，更轻也更应季。要提前网上预约，お盆 期间尤其。</div>
+      </div>
+    </article>
+
+    <!-- DAY 5 -->
+    <article class="day" id="d5" style="--line: var(--l-kyo)">
+      <div class="day-head">
+        <span class="day-no">DAY 05</span>
+        <span class="day-date">08.15 SAT</span>
+        <span class="day-name">岚山</span>
+      </div>
+      <div class="day-body">
+        <div class="tt">
+          <div class="tt-row hot"><div class="tt-time">8:00<br />前</div><div class="tt-what"><b>竹林小径</b><span class="tt-note">9 点后人山人海。<b>这一小时是全天体验差距最大的地方</b>，早起不是建议是刚需。</span></div></div>
+          <div class="tt-row"><div class="tt-time">8:30</div><div class="tt-what">野宫神社 → 天龙寺<span class="tt-note">曹源池庭园 8:30 开门。</span></div></div>
+          <div class="tt-row"><div class="tt-time">10:00</div><div class="tt-what">岚山公园龟山展望台 → 渡月桥</div></div>
+          <div class="tt-row"><div class="tt-time">12:00</div><div class="tt-what">渡月桥旁午餐<span class="tt-note">汤豆腐 / 鳗鱼饭</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">14:00</div><div class="tt-what"><b>下午三选一，别都做</b></div></div>
+          <div class="tt-row"><div class="tt-time">17:00</div><div class="tt-what">% Arabica 岚山店<span class="tt-note">渡月桥边，河景。</span></div></div>
+          <div class="tt-row"><div class="tt-time">晚上</div><div class="tt-what">回市区，四条河原町晚餐</div></div>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead><tr><th>方案</th><th>内容</th><th>适合</th></tr></thead>
+            <tbody>
+              <tr><td><b>A 推荐</b></td><td>嵯峨野小火车（<b>需提前订指定席</b>）+ 保津川游船</td><td>最凉快也最出片</td></tr>
+              <tr><td>B</td><td>金阁寺 + 龙安寺枯山水（约 40 分钟车程）</td><td>想补经典寺庙</td></tr>
+              <tr><td>C</td><td>岚山猴子公园（爬 20 分钟）</td><td>体力好、想拍全景</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn"><b>8/15 是盂兰盆正日 + 周六</b>，岚山会非常挤。</div>
+      </div>
+    </article>
+
+    <!-- DAY 6 -->
+    <article class="day" id="d6" style="--line: var(--l-kyo)">
+      <div class="day-head">
+        <span class="day-no">DAY 06</span>
+        <span class="day-date">08.16 SUN</span>
+        <span class="day-name">京都五山送り火</span>
+      </div>
+      <div class="day-body">
+        <p style="font-size:.92rem">原计划的「花火大会」这天没有。但京都有<strong>五山送り火</strong>——五座山依次点火，是京都 8 月的头牌、一年只有这一晚。你们正好在京都，这是撞上了，不是将就。</p>
+
+        <div class="okuribi" id="okuribi">
+          <ol>
+            <li><span class="t">20:00</span><span class="fire"></span><span class="mt">大文字 <small>如意ヶ嶽</small></span></li>
+            <li><span class="t">20:05</span><span class="fire"></span><span class="mt">妙・法 <small>松ヶ崎</small></span></li>
+            <li><span class="t">20:10</span><span class="fire"></span><span class="mt">船形 <small>西賀茂</small></span></li>
+            <li><span class="t">20:15</span><span class="fire"></span><span class="mt">左大文字 <small>大北山</small></span></li>
+            <li><span class="t">20:20</span><span class="fire"></span><span class="mt">鳥居形 <small>曼荼羅山</small></span></li>
+          </ol>
+          <p class="okuribi-cap">每处燃烧约 30 分钟，原则上风雨无阻。</p>
+        </div>
+
+        <h3>白天要刻意留体力，晚上得站两小时</h3>
+        <div class="tt">
+          <div class="tt-row hot"><div class="tt-time">6:00</div><div class="tt-what"><b>清水寺</b><span class="tt-note">6 点开门，8 点前几乎没人——这是京都最值的早起之一。</span></div></div>
+          <div class="tt-row"><div class="tt-time">8:00</div><div class="tt-what">二年坂 · 三年坂 → 八坂神社</div></div>
+          <div class="tt-row"><div class="tt-time">11:00</div><div class="tt-what">祇园午餐 + 咖啡馆吹空调</div></div>
+          <div class="tt-row"><div class="tt-time">13:00</div><div class="tt-what"><b>回酒店休息 2 小时</b><span class="tt-note">认真的。</span></div></div>
+          <div class="tt-row"><div class="tt-time">15:30</div><div class="tt-what">室内备选<span class="tt-note">锦市场 / 京都水族馆 / 京都铁道博物馆</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">17:30</div><div class="tt-what"><b>出发去观赏点占位</b></div></div>
+          <div class="tt-row hot"><div class="tt-time">20:00</div><div class="tt-what"><b>五山送り火</b></div></div>
+          <div class="tt-row"><div class="tt-time">21:00</div><div class="tt-what">别急着挤地铁<span class="tt-note">找家店坐 30&ndash;60 分钟再走。</span></div></div>
+        </div>
+
+        <h3>免费观赏点</h3>
+        <div class="scroll">
+          <table>
+            <thead><tr><th>地点</th><th>能看到</th><th>评价</th></tr></thead>
+            <tbody>
+              <tr><td><b>贺茂川堤</b><br /><small>北大路桥 ~ 出云路桥</small></td><td>大文字 + 船形</td><td>最推荐。河边有风，能同时看两处</td></tr>
+              <tr><td>京都御苑</td><td>大文字 + 左大文字</td><td>场地大，不容易被挤</td></tr>
+              <tr><td>鸭川 三条~四条</td><td>大文字</td><td>人最多，但离晚餐和酒店近</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn"><b>18:00 前必须到位占位。</b>结束后地铁和巴士会瘫痪 30&ndash;60 分钟，白天也一样堵——<b>今天能走路或坐地铁就别坐巴士。</b></div>
+        <div class="tip"><b>不想人挤人</b>——找带天台观景的酒店餐厅「送り火プラン」。这类席位通常 6&ndash;7 月就卖光了，现在只能碰运气，但值得打两个电话问问。</div>
+      </div>
+    </article>
+
+    <!-- DAY 7 -->
+    <article class="day" id="d7" style="--line: var(--l-kib)">
+      <div class="day-head">
+        <span class="day-no">DAY 07</span>
+        <span class="day-date">08.17 MON</span>
+        <span class="day-name">贵船 · 避暑日</span>
+      </div>
+      <div class="day-body">
+        <p style="font-size:.92rem"><strong>全程体感最舒服的一天。</strong>贵船在山谷里，比市区低 5&ndash;10℃。</p>
+        <div class="tip" style="margin-top:.6rem"><b>怎么去</b>——出町柳站 → 叡山電車「貴船口」约 30 分钟（会经过红叶隧道路段）→ 京都巴士或车站接驳巴士 5&ndash;7 分钟到「貴船」。</div>
+        <div class="tt" style="margin-top:1rem">
+          <div class="tt-row hot"><div class="tt-time">9:30</div><div class="tt-what"><b>贵船神社 本宫</b><span class="tt-note">那条挂满灯笼的石阶，是全京都最出片的楼梯之一。</span></div></div>
+          <div class="tt-row"><div class="tt-time">10:00</div><div class="tt-what">水占みくじ<span class="tt-note">签纸浸到水里才显字，3 个女生一定会玩。</span></div></div>
+          <div class="tt-row"><div class="tt-time">10:30</div><div class="tt-what">沿溪走到 結社 → 奥宮</div></div>
+          <div class="tt-row hot"><div class="tt-time">11:30</div><div class="tt-what"><b>川床料理</b><span class="tt-note">在溪水上搭台吃饭，脚边就是水。2026 年川床期间 5/1&ndash;9/30，营业 11:30&ndash;20:00，怀石 9,900&ndash;18,500 日元/人。<b>必须提前订，一般要求 3 天前。</b><br />省钱版：ひろ文的「流しそうめん」流水素面，便宜很多氛围拉满，但<b>只能现场排队，11:00 前到</b>。</span></div></div>
+          <div class="tt-row"><div class="tt-time">14:00</div><div class="tt-what">下午二选一</div></div>
+          <div class="tt-row"><div class="tt-time">傍晚</div><div class="tt-what">回市区，四条河原町晚餐</div></div>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead><tr><th>方案</th><th>内容</th></tr></thead>
+            <tbody>
+              <tr><td>A</td><td>贵船 → 鞍马徒步山道 1&ndash;1.5 小时（西门 → 木の根道 → 本殿 → 仁王門），下山泡 <b>鞍馬温泉</b></td></tr>
+              <tr><td>B</td><td>原路回市区 → 下鴨神社 + 出町柳「出町ふたば」豆饼 → 一乗寺 逛书店</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn">选 A 的话：这段山路有台风后封闭的历史，<b>当天务必在叡山電車官网或车站确认「貴船〜鞍馬 登山道」是否通行</b>。穿运动鞋，别穿裙子配凉鞋。</div>
+        <div class="tip"><b>装备</b>——贵船蚊子多（带驱蚊），山里下午容易下阵雨（带折伞），川床有的店要脱鞋（穿好穿脱的鞋）。</div>
+      </div>
+    </article>
+
+    <!-- DAY 8 -->
+    <article class="day" id="d8" style="--line: var(--l-nar)">
+      <div class="day-head">
+        <span class="day-no">DAY 08</span>
+        <span class="day-date">08.18 TUE</span>
+        <span class="day-name">宇治 + 奈良</span>
+      </div>
+      <div class="day-body">
+        <div class="warn" style="margin-top:0"><b>顺序很重要</b>——宇治在京都和奈良中间，<b>必须先宇治后奈良</b>，反过来要走回头路。<br />京都站 <span class="num">—JR奈良线快速 30′→</span> 宇治 <span class="num">—30′→</span> 奈良 <span class="num">—45′→</span> 京都</div>
+        <div class="tt" style="margin-top:1rem">
+          <div class="tt-row"><div class="tt-time">8:30</div><div class="tt-what">京都站出发</div></div>
+          <div class="tt-row hot"><div class="tt-time">9:00</div><div class="tt-what"><b>到宇治，先去中村藤吉本店取号</b><span class="tt-note">要排队，取完号再去逛平等院，回来正好吃。</span></div></div>
+          <div class="tt-row"><div class="tt-time">9:20</div><div class="tt-what">平等院<span class="tt-note">8:30 开门；凤凰堂内部参拜要另外排号、另外买票。</span></div></div>
+          <div class="tt-row"><div class="tt-time">10:30</div><div class="tt-what">宇治川 + 朝雾桥散步 → 宇治上神社</div></div>
+          <div class="tt-row"><div class="tt-time">11:30</div><div class="tt-what">抹茶午餐<span class="tt-note">中村藤吉本店（生茶果冻）/ 伊藤久右衛門（抹茶荞麦面）</span></div></div>
+          <div class="tt-row"><div class="tt-time">13:20</div><div class="tt-what">JR 前往奈良</div></div>
+          <div class="tt-row hot"><div class="tt-time">14:00</div><div class="tt-what"><b>东大寺大佛殿</b><span class="tt-note">4&ndash;10 月 7:30&ndash;17:30。先进室内，避开最毒的时段。</span></div></div>
+          <div class="tt-row"><div class="tt-time">15:30</div><div class="tt-what">奈良公园喂鹿</div></div>
+          <div class="tt-row"><div class="tt-time">16:30</div><div class="tt-what">春日大社<span class="tt-note">灯笼参道</span></div></div>
+          <div class="tt-row"><div class="tt-time">17:30</div><div class="tt-what">奈良町老街 / 猿沢池看夕阳</div></div>
+          <div class="tt-row"><div class="tt-time">19:00</div><div class="tt-what">回京都，京都站或四条收尾晚餐</div></div>
+        </div>
+        <div class="warn">
+          <b>喂鹿安全，3 个女生特别注意</b>
+          <ul style="margin:.4rem 0 0; padding-left:1.1rem">
+            <li>鹿仙贝<b>买了就立刻喂完</b>，拿在手上会被十几只围住顶你</li>
+            <li>被围住时：<b>举高手 + 转身背对</b>，鹿就会散开</li>
+            <li>纸袋、地图、门票收进包里——鹿会抢纸吃</li>
+            <li><b>别蹲下和鹿脸对脸自拍</b>，鹿角和牙都会伤人</li>
+            <li><b>穿裤装</b>，裙子会被咬</li>
+          </ul>
+        </div>
+        <div class="tip">8 月的奈良公园完全没遮阳，14:00&ndash;16:00 最毒。所以先安排室内的东大寺，喂鹿放到 15:30 之后。</div>
+      </div>
+    </article>
+
+    <!-- DAY 9 -->
+    <article class="day" id="d9" style="--line: var(--l-air)">
+      <div class="day-head">
+        <span class="day-no">DAY 09</span>
+        <span class="day-date">08.19 WED</span>
+        <span class="day-name">返程</span>
+      </div>
+      <div class="day-body">
+        <div class="tt">
+          <div class="tt-row"><div class="tt-time">上午</div><div class="tt-what">京都站 伊势丹 / Porta 地下街<span class="tt-note">最后采购：八桥、宇治抹茶、京都限定。</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">上午</div><div class="tt-what"><b>眼镜收尾</b><span class="tt-note">选了方案 C（寄到酒店）的话，今天务必确认已签收。没到就让酒店代收后国际寄送，或者当场改成只带镜架走。</span></div></div>
+          <div class="tt-row"><div class="tt-time">中午</div><div class="tt-what">京都 → 关西机场<span class="tt-note"><b>JR HARUKA 特急约 80 分钟，提前订指定席</b>——盂兰盆结束后一天仍然满。<br />或利木津巴士约 100 分钟，行李多时更省事，但有堵车风险。</span></div></div>
+          <div class="tt-row"><div class="tt-time">下午</div><div class="tt-what">返程航班</div></div>
+        </div>
+        <div class="warn"><b>起飞前 3 小时到机场</b>——旺季 KIX 的免税/退税柜台和值机队伍都很长。</div>
+      </div>
+    </article>
+  </section>
+
+  <hr class="div" />
+
+  <section id="memo">
+    <p class="eyebrow" style="margin-top:1.6rem">备忘</p>
+    <h2>网络：一台 WiFi 蛋不够</h2>
+    <p>环球漫游和漫游超人都可以，日本线路基本都走 docomo / softbank，速度差别不大。但有两个现实问题：</p>
+    <p><strong>一台 WiFi 蛋 = 三个人必须待在一起。</strong>USJ 走散、心斋桥各逛各的、有人先回酒店——只要一分开，另外两个人就没网。三个女生出行，分头行动是必然会发生的。</p>
+    <p><strong>续航撑不过 USJ 那天。</strong>WiFi 蛋续航 8&ndash;10 小时，8/12 从早 8 点玩到晚 9 点，一定不够。</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>方案</th><th>配置</th></tr></thead>
+        <tbody>
+          <tr><td><b>推荐</b></td><td>每人 1 张 eSIM（主）+ 1 台 WiFi 蛋（备用）</td></tr>
+          <tr><td>退一步</td><td>租 <b>2 台</b> WiFi 蛋，分开行动时一人一台</td></tr>
+          <tr><td>不建议</td><td>3 个人只租 1 台</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>取货</b>——你们是开车去香港机场，建议<b>顺丰寄到家</b>，别指望 HKG 有柜台。出发前一天到货，当场开机测试，有问题还来得及换。<br /><b>充电宝</b>——每人 10,000mAh 以上。日本航线规定充电宝必须随身、不能托运，且不能放在头顶行李架，要放座位下或随身可见处。<br /><b>押金</b>——租之前确认丢失赔付金额（WiFi 蛋丢失通常赔 800&ndash;1,500 元）。</div>
+
+    <h2 style="margin-top:2.2rem">交通卡与周游券</h2>
+    <p>主力用 <strong>ICOCA</strong>（或直接加进 Apple Pay）。JR、地铁、私铁、便利店都能刷。</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>要单独买</th><th>什么时候</th></tr></thead>
+        <tbody>
+          <tr><td>KIX → 环球影城 巴士票</td><td class="num">8/11 现场买</td></tr>
+          <tr><td>嵯峨野小火车 指定席（选方案 A）</td><td class="num">提前订</td></tr>
+          <tr><td>HARUKA 指定席</td><td class="num">提前订</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>JR 关西周游券大概率不用买</b>——这条线路的 JR 使用集中在 8/18（宇治 + 奈良）和 8/19（HARUKA），单买更便宜；8/17 贵船走的是叡山電車，JR 券本来也不覆盖。<br />可以考虑 8/13 的<b>大阪地铁一日券</b>，如果当天在梅田↔心斋桥↔难波之间来回跑。</div>
+
+    <h2 style="margin-top:2.2rem">预算参考</h2>
+    <p style="font-size:.85rem;color:var(--ink-3)">每人 · 不含机票 · 不含购物 · 按 1 元 ≈ 20 日元粗算</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>项目</th><th>金额（元）</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>住宿 8 晚（3 人分摊）</td><td class="num">5,000 &ndash; 9,000</td><td>盂兰盆溢价，京都 8/15&ndash;16 是大头</td></tr>
+          <tr><td>USJ 门票 + Express Pass</td><td class="num">1,300 &ndash; 2,000</td><td>高峰日 EP 浮动很大</td></tr>
+          <tr><td>贵船川床午餐</td><td class="num">500 &ndash; 950</td><td>流水素面约 150</td></tr>
+          <tr><td>市内交通 + HARUKA</td><td class="num">600</td><td></td></tr>
+          <tr><td>餐饮 8 天</td><td class="num">2,500 &ndash; 4,000</td><td></td></tr>
+          <tr><td><b>小计</b></td><td class="num"><b>10,000 &ndash; 16,500</b></td><td></td></tr>
+          <tr><td>增永镜架 1 副</td><td class="num">1,800 &ndash; 4,000</td><td>看款式，不含镜片</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:2.2rem">8 月关西的天气</h2>
+    <p><strong>35&ndash;38℃，湿度高，体感比数字更难受。</strong>行程里所有户外内容都压在早 7&ndash;10 点和傍晚 17 点后，中间那段安排室内或休息。这不是偷懒，是能不能撑完 9 天的关键。</p>
+    <div class="tip"><b>必备</b>——手持风扇、冷感毛巾、冰贴（冷えピタ）、防晒 SPF50+ 每 2 小时补、盐糖或宝矿力粉。便利店的冷冻宝特瓶饮料是神器，边化边喝还能当冰袋。<br /><b>中暑信号</b>——头晕、恶心、<b>该出汗却不出汗</b>，立刻进便利店吹空调。三个人互相盯着。</div>
+
+    <h2 style="margin-top:2.2rem">出片点排序</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>地点</th><th>最佳时间</th></tr></thead>
+        <tbody>
+          <tr><td>贵船神社 灯笼石阶</td><td>全天，人少时更好</td></tr>
+          <tr><td>伏见稻荷 千本鸟居</td><td>清晨 或 傍晚 16:00 后</td></tr>
+          <tr><td>岚山竹林</td><td><b>8:00 前</b></td></tr>
+          <tr><td>祇园白川 巽桥</td><td>傍晚</td></tr>
+          <tr><td>二年坂 · 三年坂</td><td>清晨 8:00 前</td></tr>
+          <tr><td>渡月桥 + % Arabica</td><td>傍晚</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>高跟鞋别带。</b>京都石板路 + 每天两万步。8 月建议浴衣不建议和服。</div>
+
+    <h2 style="margin-top:2.2rem">出发前待办</h2>
+    <p style="font-size:.85rem;color:var(--ink-3)">勾选状态存在这台设备上</p>
+    <ul class="todo" id="todo">
+      <li><label><input type="checkbox" data-k="t1" /><span class="txt">京都 8/14&ndash;8/18 住宿，尤其 8/15、8/16</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t2" /><span class="txt">USJ 8/12 门票 + Express Pass</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t3" /><span class="txt">贵船川床 8/17 午餐预约</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t4" /><span class="txt">USJ 中文管家 / 代排服务确认</span><span class="due">3 天内</span></label></li>
+      <li><label><input type="checkbox" data-k="t5" /><span class="txt">WiFi 蛋 / eSIM 下单，顺丰寄到家</span><span class="due">3 天内</span></label></li>
+      <li><label><input type="checkbox" data-k="t6" /><span class="txt">8/19 HARUKA 指定席</span><span class="due">3 天内</span></label></li>
+      <li><label><input type="checkbox" data-k="t7" /><span class="txt">8/15 嵯峨野小火车 指定席</span><span class="due">3 天内</span></label></li>
+      <li><label><input type="checkbox" data-k="t8" /><span class="txt">跨境专车（8/11 去 HKG）</span><span class="due">出发前</span></label></li>
+      <li><label><input type="checkbox" data-k="t9" /><span class="txt">现有眼镜度数 + 瞳距 PD 拍照存手机</span><span class="due">出发前</span></label></li>
+      <li><label><input type="checkbox" data-k="t10" /><span class="txt">Visit Japan Web 入境登记</span><span class="due">出发前</span></label></li>
+      <li><label><input type="checkbox" data-k="t11" /><span class="txt">浴衣体验预约</span><span class="due">出发前</span></label></li>
+      <li><label><input type="checkbox" data-k="t12" /><span class="txt">热门餐厅（蟹道乐、鸭川纳凉床、和牛）</span><span class="due">出发前</span></label></li>
+    </ul>
+
+    <h2 style="margin-top:2.2rem">和原方案的差异</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>变化</th><th>原因</th></tr></thead>
+        <tbody>
+          <tr><td>删掉神户</td><td>9 天塞进 USJ 全日 + 京都 5 晚，神户只能走马观花</td></tr>
+          <tr><td>删掉大阪城 / 黑门市场 / 通天阁 / 阿倍野</td><td>大阪只剩 8/13 一个整天，诉求是购物，就全给购物和眼镜</td></tr>
+          <tr><td>伏见稻荷 上午 → 下午 15:30</td><td>8 月上午晒到走不动，下午 3 点后人反而更少、光线更好</td></tr>
+          <tr><td>8/16 花火大会 → 五山送り火</td><td>2026 年京阪没有 8 月中旬的花火大会</td></tr>
+          <tr><td>宇治和奈良合并到 8/18</td><td>两地在同一条 JR 线上，先宇治后奈良刚好顺路</td></tr>
+          <tr><td>岚山从半天扩到整天</td><td>竹林要早起、小火车 + 保津川要占半天，切碎了反而都做不好</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>行程据 2026 年 8 月公开信息整理；营业时间、活动日期、票价请在出行前以官方渠道复核。</p>
+    <p style="margin-top:.9rem"><strong>参考来源</strong></p>
+    <ul>
+      <li><a href="https://ja.kyoto.travel/event/major/okuribi/">京都五山送り火｜京都市公式 京都観光Navi</a></li>
+      <li><a href="https://hanabi.walkerplus.com/list/ar0700/">関西の花火大会 2026｜ウォーカープラス</a></li>
+      <li><a href="https://ja.kyoto.travel/event/single.php?event_id=4453">貴船の川床｜京都市公式 京都観光Navi</a></li>
+      <li><a href="https://www.masunaga-opt.co.jp/store/kitte">MASUNAGA1905 KITTE大阪店｜増永眼鏡</a></li>
+      <li><a href="https://www.h-sanbangai.com/shop/detail/45">マスナガ1905｜阪急三番街</a></li>
+      <li><a href="https://www.kate.co.jp/timetable/detail/NU">関西空港リムジンバス USJ 線｜関西空港交通</a></li>
+      <li><a href="https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00019.html">消費税免税制度の改正（2026/11/1〜）｜観光庁</a></li>
+    </ul>
+  </footer>
+
+</main>
+
+<script>
+  // --- tap to copy japanese phrases ---
+  document.querySelectorAll(".phrase").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy");
+      var label = btn.querySelector(".copy");
+      var done = function () {
+        btn.classList.add("copied");
+        label.textContent = "已复制";
+        setTimeout(function () {
+          btn.classList.remove("copied");
+          label.textContent = "复制";
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); });
+      } else {
+        fallback(text, done);
+      }
+    });
+  });
+
+  function fallback(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); done(); } catch (e) { /* clipboard unavailable */ }
+    document.body.removeChild(ta);
+  }
+
+  // --- okuribi ignition sequence ---
+  var okuribi = document.getElementById("okuribi");
+  if (okuribi && "IntersectionObserver" in window) {
+    var fireObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { okuribi.classList.add("lit"); fireObs.disconnect(); }
+      });
+    }, { threshold: 0.4 });
+    fireObs.observe(okuribi);
+  } else if (okuribi) {
+    okuribi.classList.add("lit");
+  }
+
+  // --- day chips follow scroll ---
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var targets = chips.map(function (c) { return document.querySelector(c.getAttribute("href")); });
+  var nav = document.querySelector(".chips");
+
+  function setCurrent(i) {
+    chips.forEach(function (c, n) {
+      if (n === i) { c.setAttribute("aria-current", "true"); }
+      else { c.removeAttribute("aria-current"); }
+    });
+    var el = chips[i];
+    if (el && nav) {
+      var left = el.offsetLeft - nav.clientWidth / 2 + el.clientWidth / 2;
+      nav.scrollTo({ left: left, behavior: "smooth" });
+    }
+  }
+
+  if ("IntersectionObserver" in window) {
+    var dayObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var i = targets.indexOf(e.target);
+        if (i > -1) setCurrent(i);
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    targets.forEach(function (t) { if (t) dayObs.observe(t); });
+  }
+
+  // --- checklist persistence ---
+  var boxes = document.querySelectorAll("#todo input[type=checkbox]");
+  var KEY = "kansai2026-todo";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { saved = {}; }
+
+  boxes.forEach(function (b) {
+    if (saved[b.dataset.k]) b.checked = true;
+    b.addEventListener("change", function () {
+      saved[b.dataset.k] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) { /* storage blocked */ }
+    });
+  });
+</script>
