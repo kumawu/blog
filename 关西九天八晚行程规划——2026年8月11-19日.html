@@ -92,7 +92,7 @@
 
   * { box-sizing: border-box; }
 
-  main[id], section[id] { scroll-margin-top: 5.6rem; }
+  main[id], section[id], h2[id] { scroll-margin-top: 5.6rem; }
 
   body {
     margin: 0;
@@ -682,11 +682,12 @@
     <a class="chip" href="#d3" style="--line: var(--l-osa)">D3</a>
     <a class="chip" href="#d4" style="--line: var(--l-kyo)">D4</a>
     <a class="chip" href="#d5" style="--line: var(--l-kyo)">D5</a>
-    <a class="chip" href="#d6" style="--line: var(--l-kyo)">D6</a>
+    <a class="chip" href="#d6" style="--line: var(--ember)">D6</a>
     <a class="chip" href="#d7" style="--line: var(--l-kib)">D7</a>
     <a class="chip" href="#d8" style="--line: var(--l-nar)">D8</a>
     <a class="chip" href="#d9" style="--line: var(--l-air)">D9</a>
     <a class="chip" href="#memo" style="--line: var(--ink)">备忘</a>
+    <a class="chip" href="#transit" style="--line: var(--ink)">交通科普</a>
   </nav>
 </header>
 
@@ -694,12 +695,13 @@
 
   <div class="masthead">
     <p class="route">香港 → 关西 · 3 人同行 · 8 晚 9 天</p>
-    <h1>京都 · 大阪 · 奈良 · 宇治</h1>
-    <p class="lede">按 8/11&ndash;8/19 的日期骨架排的行程。这一周撞上山之日和盂兰盆，是日本全年最挤的一周，所以除了每天怎么走，这份还处理了三件原方案没算进去的事。</p>
+    <h1>京都 · 大阪 · 宫津 · 奈良</h1>
+    <p class="lede">按 8/11&ndash;8/19 的日期骨架排的行程。这一周撞上山之日和盂兰盆，是日本全年最挤的一周。除了每天怎么走，这份还处理了四件事：<strong>宫津花火当晚回不了京都</strong>、盂兰盆的连锁影响、增永眼镜的交期风险，以及第一次来日本的交通科普。</p>
     <div class="legend">
       <span style="--line: var(--l-air)"><i></i>机场 · 移动</span>
       <span style="--line: var(--l-osa)"><i></i>大阪</span>
       <span style="--line: var(--l-kyo)"><i></i>京都</span>
+      <span style="--line: var(--ember)"><i></i>宫津 · 花火</span>
       <span style="--line: var(--l-kib)"><i></i>贵船 · 山间</span>
       <span style="--line: var(--l-nar)"><i></i>奈良 · 宇治</span>
     </div>
@@ -707,11 +709,13 @@
 
   <section>
     <div class="urgent">
-      <p class="eyebrow">距出发 7 天 · 今天就得订</p>
+      <p class="eyebrow">今天就得订</p>
       <ol>
-        <li><b>01</b><div>京都 8/14&ndash;8/18 住宿<span>尤其 <b>8/15、8/16</b>——盂兰盆 + 周末 + 送り火，京都全年最难订的两晚，价格会翻倍。</span></div></li>
-        <li><b>02</b><div>USJ 8/12 门票 + Express Pass<span>高峰日 EP 会提前售罄，售罄就只能排 120&ndash;180 分钟。</span></div></li>
-        <li><b>03</b><div>贵船川床 8/17 午餐<span>一般要求 <b>3 天前</b>预约，现在订还来得及，再晚就没位了。</span></div></li>
+        <li><b>01</b><div>8/16 宫津 / 天橋立 住宿<span>看完花火<b>当晚回不了京都</b>（见下）。订不到就往福知山、与謝野、京丹後、西舞鶴扩。</span></div></li>
+        <li><b>02</b><div>特急「はしだて」指定席 &times; 2<span>8/16 去 + 8/17 回。<b>全车指定席，没票就是上不去车。</b></span></div></li>
+        <li><b>03</b><div>京都 8/14&ndash;8/18 住宿<span>盂兰盆 + 周末，全年最难订。<b>8/16 那晚也别退</b>，留着放行李。</span></div></li>
+        <li><b>04</b><div>USJ 8/12 门票 + Express Pass<span>高峰日 EP 会提前售罄，售罄就只能排 120&ndash;180 分钟。</span></div></li>
+        <li><b>05</b><div>贵船川床 8/17 午餐<span>要求 <b>3 天前</b>预约。<b>订 13:30 那轮，别订 11:30</b>——上午还在特急上。</span></div></li>
       </ol>
     </div>
   </section>
@@ -721,20 +725,46 @@
     <h2>先看这里，再看每天</h2>
 
     <div class="finding">
-      <h3>一 · 8/16 那场「花火大会」，2026 年不存在</h3>
-      <p>关西的大型花火今年全挪走了：</p>
+      <h3>一 · 去宫津看花火：当晚回不了京都</h3>
+      <p>宮津燈籠流し花火大会是 8/11&ndash;8/19 期间关西唯一的大型花火（大阪淀川花火改到 10/17，猪名川改到 11 月，琵琶湖是 8/6 已过）。会场在<strong>京都丹後鉄道「宮津駅」步行 10 分钟</strong>的島崎公園&mdash;&mdash;注意不是天橋立駅，两站隔一站。</p>
+
+      <div class="okuribi" id="okuribi">
+        <ol>
+          <li><span class="t">18:30</span><span class="fire"></span><span class="mt">御詠歌</span></li>
+          <li><span class="t">19:20</span><span class="fire"></span><span class="mt">精霊船点火 <small>+ 燈籠流し</small></span></li>
+          <li><span class="t">19:50</span><span class="fire"></span><span class="mt">花火打上 <small>45 分钟</small></span></li>
+          <li><span class="t">20:35</span><span class="fire"></span><span class="mt">花火结束</span></li>
+          <li><span class="t">21:35</span><span class="fire"></span><span class="mt">盆おどり大会 <small>结束</small></span></li>
+        </ol>
+        <p class="okuribi-cap">灯笼顺水漂出去那段其实比花火更好看，别只顾着等 19:50。</p>
+      </div>
+
+      <h3>回程末班全部早于花火</h3>
       <div class="scroll">
         <table>
-          <thead><tr><th>花火大会</th><th>2026 日期</th><th>说明</th></tr></thead>
+          <thead><tr><th>回京都的方式</th><th>末班</th><th>结论</th></tr></thead>
           <tbody>
-            <tr><td>なにわ淀川花火（大阪）</td><td class="num">10/17</td><td>不再是 8 月</td></tr>
-            <tr><td>猪名川花火</td><td class="num">11/07</td><td>改为隔年举办</td></tr>
-            <tr><td>びわ湖大花火（滋贺）</td><td class="num">08/06</td><td>已经过了</td></tr>
-            <tr><td>宮津燈籠流し花火</td><td class="num">08/16</td><td>唯一当天的，但在日本海侧，离京都 2.5 小时</td></tr>
+            <tr><td>JR 特急「はしだて」<br /><small>唯一直达京都的车</small></td><td class="num">天橋立<br />约 19:05 发</td><td>比花火<b>开始</b>还早 45 分钟</td></tr>
+            <tr><td>丹海高速巴士 京都线</td><td class="num">天橋立<br />18:00 发</td><td>更早</td></tr>
+            <tr><td>丹鉄 花火临时加开列车</td><td class="num">花火后有</td><td><b>只在丹后半岛内部跑</b>（福知山 / 西舞鹤 / 丰冈方向），不通京都</td></tr>
           </tbody>
         </table>
       </div>
-      <p><em>8/11&ndash;8/19 这九天，大阪和京都市区没有大型花火大会。</em>但 8/16 晚上京都有比花火更有分量的东西，见 <a href="#d6">Day 6</a>。</p>
+      <p><em>只要你看完花火，当晚就回不到京都四条。</em>这不是挤不挤的问题，是没有车。</p>
+
+      <div class="scroll">
+        <table>
+          <thead><tr><th>方案</th><th>做法</th><th>评价</th></tr></thead>
+          <tbody>
+            <tr><td><b>A 推荐</b></td><td>8/16 住宫津 / 天橋立，8/17 上午特急回京都</td><td>顺带把日本三景之一的天橋立玩了</td></tr>
+            <tr><td>B 备选</td><td>住福知山（花火后坐丹鉄临时车过去，约 1 小时）</td><td>宫津订不到时用；8/17 早上回京都 1 小时 20 分</td></tr>
+            <tr><td>C 兜底</td><td>包车往返，全天约 8&ndash;12 万日元/车</td><td>不用过夜，3 人分摊约 1,300&ndash;2,000 元/人</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip"><b>加分项 · 观赏船</b>——天橋立桟橋 19:20 集合、19:35 出发，在海上看完花火再回港。不用挤人，视角也好，需提前预约。</div>
+      <div class="tip"><b>官方确认渠道</b>（每年 7 月底 &ndash; 8 月初出当天专用时刻表 PDF）：<a href="https://trains.willer.co.jp/">京都丹後鉄道</a>　·　宮津市観光係 <a href="tel:+81772451625">0772-45-1625</a>　·　宮津商工会議所 <a href="tel:+81772225131">0772-22-5131</a></div>
     </div>
 
     <div class="finding">
@@ -745,7 +775,7 @@
           <tbody>
             <tr><td class="num">8/11 二</td><td><b>山之日</b>，日本法定假日</td></tr>
             <tr><td class="num">8/13 &ndash; 8/16</td><td><b>お盆（盂兰盆节）</b>，全国返乡潮</td></tr>
-            <tr><td class="num">8/15 &ndash; 8/16</td><td>周末 + 盂兰盆正日 + 京都送り火</td></tr>
+            <tr><td class="num">8/15 &ndash; 8/16</td><td>周末 + 盂兰盆正日。8/16 京都还有五山送り火，全城更堵&mdash;&mdash;<b>当天早点出发去宫津</b></td></tr>
           </tbody>
         </table>
       </div>
@@ -929,51 +959,39 @@
     </article>
 
     <!-- DAY 6 -->
-    <article class="day" id="d6" style="--line: var(--l-kyo)">
+    <article class="day" id="d6" style="--line: var(--ember)">
       <div class="day-head">
         <span class="day-no">DAY 06</span>
         <span class="day-date">08.16 SUN</span>
-        <span class="day-name">京都五山送り火</span>
+        <span class="day-name">京都 → 宫津 · 花火之夜</span>
       </div>
       <div class="day-body">
-        <p style="font-size:.92rem">原计划的「花火大会」这天没有。但京都有<strong>五山送り火</strong>——五座山依次点火，是京都 8 月的头牌、一年只有这一晚。你们正好在京都，这是撞上了，不是将就。</p>
-
-        <div class="okuribi" id="okuribi">
-          <ol>
-            <li><span class="t">20:00</span><span class="fire"></span><span class="mt">大文字 <small>如意ヶ嶽</small></span></li>
-            <li><span class="t">20:05</span><span class="fire"></span><span class="mt">妙・法 <small>松ヶ崎</small></span></li>
-            <li><span class="t">20:10</span><span class="fire"></span><span class="mt">船形 <small>西賀茂</small></span></li>
-            <li><span class="t">20:15</span><span class="fire"></span><span class="mt">左大文字 <small>大北山</small></span></li>
-            <li><span class="t">20:20</span><span class="fire"></span><span class="mt">鳥居形 <small>曼荼羅山</small></span></li>
-          </ol>
-          <p class="okuribi-cap">每处燃烧约 30 分钟，原则上风雨无阻。</p>
+        <div class="warn" style="margin-top:0"><b>行李处理</b>——京都的房<b>不要退</b>（8/14&ndash;8/18 连住），今天只带一个过夜小包去宫津，明天回来。省得拖箱子上特急。</div>
+        <div class="tt" style="margin-top:1rem">
+          <div class="tt-row hot"><div class="tt-time">上午</div><div class="tt-what"><b>京都站 → 天橋立 / 宫津</b><span class="tt-note">见下面三条路。</span></div></div>
+          <div class="tt-row"><div class="tt-time">中午</div><div class="tt-what">天橋立午餐<span class="tt-note">海鲜、丹后地物</span></div></div>
+          <div class="tt-row"><div class="tt-time">下午</div><div class="tt-what"><b>天橋立观光</b><span class="tt-note">既然来了别只看花火。伞松公园缆车上山「股のぞき」倒着看飞龙观 / 沿沙洲骑车 3.6 公里（租车约 400 日元）/ 智恩寺。</span></div></div>
+          <div class="tt-row"><div class="tt-time">17:00</div><div class="tt-what">回宫津，島崎公園附近占位<span class="tt-note">周边小吃摊开始摆。</span></div></div>
+          <div class="tt-row"><div class="tt-time">18:30</div><div class="tt-what">御詠歌</div></div>
+          <div class="tt-row hot"><div class="tt-time">19:20</div><div class="tt-what"><b>精霊船点火 + 燈籠流し</b><span class="tt-note">灯笼顺水漂出去，这段其实比花火更好看。</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">19:50<br />20:35</div><div class="tt-what"><b>花火打上</b></div></div>
+          <div class="tt-row"><div class="tt-time">21:00</div><div class="tt-what">盆おどり 或 直接回住处</div></div>
         </div>
 
-        <h3>白天要刻意留体力，晚上得站两小时</h3>
-        <div class="tt">
-          <div class="tt-row hot"><div class="tt-time">6:00</div><div class="tt-what"><b>清水寺</b><span class="tt-note">6 点开门，8 点前几乎没人——这是京都最值的早起之一。</span></div></div>
-          <div class="tt-row"><div class="tt-time">8:00</div><div class="tt-what">二年坂 · 三年坂 → 八坂神社</div></div>
-          <div class="tt-row"><div class="tt-time">11:00</div><div class="tt-what">祇园午餐 + 咖啡馆吹空调</div></div>
-          <div class="tt-row"><div class="tt-time">13:00</div><div class="tt-what"><b>回酒店休息 2 小时</b><span class="tt-note">认真的。</span></div></div>
-          <div class="tt-row"><div class="tt-time">15:30</div><div class="tt-what">室内备选<span class="tt-note">锦市场 / 京都水族馆 / 京都铁道博物馆</span></div></div>
-          <div class="tt-row hot"><div class="tt-time">17:30</div><div class="tt-what"><b>出发去观赏点占位</b></div></div>
-          <div class="tt-row hot"><div class="tt-time">20:00</div><div class="tt-what"><b>五山送り火</b></div></div>
-          <div class="tt-row"><div class="tt-time">21:00</div><div class="tt-what">别急着挤地铁<span class="tt-note">找家店坐 30&ndash;60 分钟再走。</span></div></div>
-        </div>
-
-        <h3>免费观赏点</h3>
+        <h3>去程三条路，都要提前订</h3>
         <div class="scroll">
           <table>
-            <thead><tr><th>地点</th><th>能看到</th><th>评价</th></tr></thead>
+            <thead><tr><th>方式</th><th>时间</th><th>说明</th></tr></thead>
             <tbody>
-              <tr><td><b>贺茂川堤</b><br /><small>北大路桥 ~ 出云路桥</small></td><td>大文字 + 船形</td><td>最推荐。河边有风，能同时看两处</td></tr>
-              <tr><td>京都御苑</td><td>大文字 + 左大文字</td><td>场地大，不容易被挤</td></tr>
-              <tr><td>鸭川 三条~四条</td><td>大文字</td><td>人最多，但离晚餐和酒店近</td></tr>
+              <tr><td><b>JR 特急<br />「はしだて」</b></td><td class="num">约 2h</td><td>京都站直达宫津。一天只有 5 班左右，<b>2022 年起全车指定席</b>，没订到票上不去。花火日必满&mdash;&mdash;<b>今天就订</b></td></tr>
+              <tr><td>丹海高速巴士<br />京都线</td><td class="num">125′</td><td>京都站烏丸口 → 天橋立站。去程 07:20 / 09:00 / <b>12:55</b> / 16:20 / 18:20。<b>需电话或网上预约</b>（<a href="tel:+81120158814">0120-15-8814</a>，9:00&ndash;18:00）。推荐 12:55，下午还够玩天橋立</td></tr>
+              <tr><td>包车</td><td class="num">约 2.5h</td><td>最贵最自由，可当天往返不过夜</td></tr>
             </tbody>
           </table>
         </div>
-        <div class="warn"><b>18:00 前必须到位占位。</b>结束后地铁和巴士会瘫痪 30&ndash;60 分钟，白天也一样堵——<b>今天能走路或坐地铁就别坐巴士。</b></div>
-        <div class="tip"><b>不想人挤人</b>——找带天台观景的酒店餐厅「送り火プラン」。这类席位通常 6&ndash;7 月就卖光了，现在只能碰运气，但值得打两个电话问问。</div>
+        <div class="tip"><b>天橋立 ↔ 宫津</b>是丹鉄一站、约 5 分钟。<b>会场在宫津站，别在天橋立站等。</b></div>
+        <div class="warn"><b>花火后回程</b>——宫津站会设临时检票口 + 加开临时列车，但<b>只往丹后半岛内部跑，不通京都</b>。按你订的住处走：住宫津/天橋立就走路或丹鉄一站；住福知山坐丹鉄宫福线临时车，约 1 小时。</div>
+        <div class="tip"><b>当天带</b>——现金（摊位多不刷卡）、驱蚊、薄外套（海边夜里凉）、坐垫或野餐垫、手电。会场<b>禁止帐篷、三脚架、无人机、吸烟</b>。</div>
       </div>
     </article>
 
@@ -982,29 +1000,21 @@
       <div class="day-head">
         <span class="day-no">DAY 07</span>
         <span class="day-date">08.17 MON</span>
-        <span class="day-name">贵船 · 避暑日</span>
+        <span class="day-name">回京都 + 贵船</span>
       </div>
       <div class="day-body">
-        <p style="font-size:.92rem"><strong>全程体感最舒服的一天。</strong>贵船在山谷里，比市区低 5&ndash;10℃。</p>
-        <div class="tip" style="margin-top:.6rem"><b>怎么去</b>——出町柳站 → 叡山電車「貴船口」约 30 分钟（会经过红叶隧道路段）→ 京都巴士或车站接驳巴士 5&ndash;7 分钟到「貴船」。</div>
+        <p style="font-size:.92rem"><strong>上半天在路上，下半天进山避暑。</strong>贵船在山谷里，比市区低 5&ndash;10℃。</p>
         <div class="tt" style="margin-top:1rem">
-          <div class="tt-row hot"><div class="tt-time">9:30</div><div class="tt-what"><b>贵船神社 本宫</b><span class="tt-note">那条挂满灯笼的石阶，是全京都最出片的楼梯之一。</span></div></div>
-          <div class="tt-row"><div class="tt-time">10:00</div><div class="tt-what">水占みくじ<span class="tt-note">签纸浸到水里才显字，3 个女生一定会玩。</span></div></div>
-          <div class="tt-row"><div class="tt-time">10:30</div><div class="tt-what">沿溪走到 結社 → 奥宮</div></div>
-          <div class="tt-row hot"><div class="tt-time">11:30</div><div class="tt-what"><b>川床料理</b><span class="tt-note">在溪水上搭台吃饭，脚边就是水。2026 年川床期间 5/1&ndash;9/30，营业 11:30&ndash;20:00，怀石 9,900&ndash;18,500 日元/人。<b>必须提前订，一般要求 3 天前。</b><br />省钱版：ひろ文的「流しそうめん」流水素面，便宜很多氛围拉满，但<b>只能现场排队，11:00 前到</b>。</span></div></div>
-          <div class="tt-row"><div class="tt-time">14:00</div><div class="tt-what">下午二选一</div></div>
-          <div class="tt-row"><div class="tt-time">傍晚</div><div class="tt-what">回市区，四条河原町晚餐</div></div>
+          <div class="tt-row hot"><div class="tt-time">早上</div><div class="tt-what"><b>天橋立 / 宫津 → 京都</b><span class="tt-note">特急はしだて，<b>同样要提前订指定席</b>。住福知山的话：福知山 → 京都，特急约 1 小时 20 分。</span></div></div>
+          <div class="tt-row"><div class="tt-time">11:00</div><div class="tt-what">到京都站，回酒店放包</div></div>
+          <div class="tt-row"><div class="tt-time">12:00</div><div class="tt-what">京都站 → 出町柳 → 貴船<span class="tt-note">叡山電車「貴船口」约 30 分钟（经过红叶隧道路段）→ 接驳巴士 5&ndash;7 分钟。全程约 1 小时 15 分。<b>叡山電車不是 JR 也不是地铁，是私铁</b>，ICOCA 可以刷。</span></div></div>
+          <div class="tt-row hot"><div class="tt-time">13:15</div><div class="tt-what"><b>川床料理</b><span class="tt-note">在溪水上搭台吃饭，脚边就是水。2026 年川床期间 5/1&ndash;9/30，营业 11:30&ndash;20:00，怀石 9,900&ndash;18,500 日元/人。<b>必须提前订，一般要求 3 天前。</b></span></div></div>
+          <div class="tt-row hot"><div class="tt-time">15:00</div><div class="tt-what"><b>贵船神社 本宫</b><span class="tt-note">那条挂满灯笼的石阶，是全京都最出片的楼梯之一。</span></div></div>
+          <div class="tt-row"><div class="tt-time">15:30</div><div class="tt-what">水占みくじ<span class="tt-note">签纸浸到水里才显字，3 个女生一定会玩。</span></div></div>
+          <div class="tt-row"><div class="tt-time">16:00</div><div class="tt-what">沿溪走到 結社 → 奥宮</div></div>
+          <div class="tt-row"><div class="tt-time">傍晚</div><div class="tt-what">回市区，四条河原町晚餐<span class="tt-note">有体力的话在出町柳下车：走 5 分钟是<b>下鴨神社</b>（糺の森 那片林子很凉），车站边「<b>出町ふたば</b>」的豆饼是京都名物。</span></div></div>
         </div>
-        <div class="scroll">
-          <table>
-            <thead><tr><th>方案</th><th>内容</th></tr></thead>
-            <tbody>
-              <tr><td>A</td><td>贵船 → 鞍马徒步山道 1&ndash;1.5 小时（西门 → 木の根道 → 本殿 → 仁王門），下山泡 <b>鞍馬温泉</b></td></tr>
-              <tr><td>B</td><td>原路回市区 → 下鴨神社 + 出町柳「出町ふたば」豆饼 → 一乗寺 逛书店</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="warn">选 A 的话：这段山路有台风后封闭的历史，<b>当天务必在叡山電車官网或车站确认「貴船〜鞍馬 登山道」是否通行</b>。穿运动鞋，别穿裙子配凉鞋。</div>
+        <div class="warn"><b>订川床时说 13:30 到，别订 11:30 那轮</b>——上午还在特急上，晚点会很被动。同理，<b>原来的「贵船 → 鞍马徒步」这个下午选项建议放弃</b>：山道要 1&ndash;1.5 小时，走完天就黑了，而且这段有台风后封闭的历史。想爬山就把贵船和岚山（8/15）对调。</div>
         <div class="tip"><b>装备</b>——贵船蚊子多（带驱蚊），山里下午容易下阵雨（带折伞），川床有的店要脱鞋（穿好穿脱的鞋）。</div>
       </div>
     </article>
@@ -1084,19 +1094,170 @@
     </div>
     <div class="tip"><b>取货</b>——你们是开车去香港机场，建议<b>顺丰寄到家</b>，别指望 HKG 有柜台。出发前一天到货，当场开机测试，有问题还来得及换。<br /><b>充电宝</b>——每人 10,000mAh 以上。日本航线规定充电宝必须随身、不能托运，且不能放在头顶行李架，要放座位下或随身可见处。<br /><b>押金</b>——租之前确认丢失赔付金额（WiFi 蛋丢失通常赔 800&ndash;1,500 元）。</div>
 
-    <h2 style="margin-top:2.2rem">交通卡与周游券</h2>
-    <p>主力用 <strong>ICOCA</strong>（或直接加进 Apple Pay）。JR、地铁、私铁、便利店都能刷。</p>
+    <h2 style="margin-top:2.2rem" id="transit">日本交通完全科普</h2>
+    <p style="font-size:.85rem;color:var(--ink-3)">第一次来日本先看这段</p>
+    <p>日本的交通看着复杂，其实搞懂<strong>四件事</strong>就不会出错：谁在开车、车分几档、票怎么算、末班几点。</p>
+
+    <h3>铁路是三套系统，票不通用</h3>
+    <p>日本没有「全国铁路公司」这回事。关西你会遇到三种：</p>
     <div class="scroll">
       <table>
-        <thead><tr><th>要单独买</th><th>什么时候</th></tr></thead>
+        <thead><tr><th>系统</th><th>是什么</th><th>关西的例子</th></tr></thead>
         <tbody>
-          <tr><td>KIX → 环球影城 巴士票</td><td class="num">8/11 现场买</td></tr>
-          <tr><td>嵯峨野小火车 指定席（选方案 A）</td><td class="num">提前订</td></tr>
-          <tr><td>HARUKA 指定席</td><td class="num">提前订</td></tr>
+          <tr><td><b>JR</b></td><td>原国铁拆分而来，全国网络。<b>新干线和普通铁路都归它</b></td><td>京都线、奈良线、嵯峨野线、关空快速、HARUKA、はしだて</td></tr>
+          <tr><td><b>私铁</b></td><td>民营大铁路，各开各的线</td><td>阪急、阪神、京阪、近铁、南海、<b>叡山電車</b></td></tr>
+          <tr><td><b>地铁</b></td><td>市政府开的市内地铁</td><td>大阪 Metro、京都市营地下铁</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="tip"><b>JR 关西周游券大概率不用买</b>——这条线路的 JR 使用集中在 8/18（宇治 + 奈良）和 8/19（HARUKA），单买更便宜；8/17 贵船走的是叡山電車，JR 券本来也不覆盖。<br />可以考虑 8/13 的<b>大阪地铁一日券</b>，如果当天在梅田↔心斋桥↔难波之间来回跑。</div>
+    <div class="tip">三套之间<b>不通票</b>。从 JR 换私铁要<b>出闸再进闸</b>，等于买两段票。刷 IC 卡时会看到闸机连开两次&mdash;&mdash;这是正常的，不是刷错。</div>
+
+    <h3>车分几档：同一条铁路，快慢差一倍</h3>
+    <p>站台电子屏上的车种，从慢到快大致是：</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>车种</th><th>特点</th><th>要加钱？</th></tr></thead>
+        <tbody>
+          <tr><td>普通 / 各停</td><td>站站停</td><td>不用</td></tr>
+          <tr><td>快速</td><td>跳站</td><td>不用</td></tr>
+          <tr><td><b>新快速</b></td><td>JR 西日本神器。大阪 → 京都 29 分钟</td><td><b>不用</b></td></tr>
+          <tr><td>急行</td><td>跳更多站</td><td>看公司</td></tr>
+          <tr><td><b>特急</b></td><td>はしだて、HARUKA、きのさき</td><td><b>要买特急券</b></td></tr>
+          <tr><td>新干线</td><td>另一套系统，专用轨道</td><td><b>要买特急券</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn"><b>私铁的规则不一样</b>——阪急、京阪的「特急」<b>不加钱</b>（只是跳站快车），近铁的「特急」<b>要加钱</b>。别用一套逻辑套所有公司，看站内电子屏和检票口标示。</div>
+
+    <h3>最容易踩的坑：日本的票是两张</h3>
+    <p>这是没去过日本的人最常栽的地方。</p>
+    <p style="padding:.7rem .85rem;border:1px solid var(--rule);border-radius:2px;font-size:.9rem"><b>JR 车票 = 乗車券（按距离算的基础车费）+ 特急券（速度费）</b></p>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td>坐普通 / 快速 / 新快速</td><td>只要乗車券，<b>刷 ICOCA 就行</b></td></tr>
+          <tr><td>坐特急 / 新干线</td><td><b>两张都要</b>。光刷 ICOCA 上车会被查票补钱</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>特急券类型</th><th>说明</th><th>建议</th></tr></thead>
+        <tbody>
+          <tr><td><b>指定席</b></td><td>对号入座，比自由席贵约 500 日元</td><td><b>盂兰盆一律买指定席</b></td></tr>
+          <tr><td>自由席</td><td>先到先坐，坐满就站着</td><td>旺季可能站两小时</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn">你们要坐的<b>特急「はしだて」从 2022 年起全车指定席</b>&mdash;&mdash;没有自由席，<b>没订到票就是上不去车</b>。HARUKA 也强烈建议订指定席。</div>
+
+    <h3>ICOCA 怎么用</h3>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td>哪买</td><td>关西机场 / 各大车站售票机。1,500 日元 = 500 押金 + 1,000 余额</td></tr>
+          <tr><td><b>更省事</b></td><td>iPhone 直接在<b>钱包 App 加一张 ICOCA 或 Suica</b>，Apple Pay 充值，不用实体卡也不用押金</td></tr>
+          <tr><td>能刷</td><td>JR 普通车、地铁、私铁、公交、便利店、自动贩卖机、很多餐厅商店</td></tr>
+          <tr><td><b>不能刷</b></td><td>特急券、新干线&mdash;&mdash;要另外买</td></tr>
+          <tr><td>余额不够</td><td>出不了闸时找闸机旁的「<b>精算機 / のりこし精算機</b>」补钱，不用找站员</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>进出站怎么走</h3>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td class="num">1</td><td>刷卡或把纸票塞进闸机 → <b>纸票会从另一头吐出来，一定要拿走</b>（出站时才会被吃掉）</td></tr>
+          <tr><td class="num">2</td><td>找站台：看电子屏的「<b>のりば</b>」或「<b>◯番線</b>」= 几号站台</td></tr>
+          <tr><td class="num">3</td><td>确认方向：日本站台按<b>终点站名</b>标方向，不写上行下行。去奈良就找写着「奈良」的那一侧</td></tr>
+          <tr><td class="num">4</td><td>出站再刷一次</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>电子屏怎么看</b>——一般是「时刻 / 车种 / 终点站 / 站台号」四列。车种用颜色区分：<b>红色多半是特急</b>，橙色快速，白或蓝色普通。</div>
+
+    <h3>巴士：规矩和国内完全相反</h3>
+    <p>京都地铁只有两条线，很多景点靠巴士。</p>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td><b>上下车</b></td><td><b>后门上车，前门下车，下车时才付钱</b></td></tr>
+          <tr><td>车费</td><td>均一区间 230 日元；刷 ICOCA 要<b>上车刷一次、下车刷一次</b></td></tr>
+          <tr><td>停车</td><td>车内屏显示下一站，<b>要按铃车才停</b>，不按就过站</td></tr>
+          <tr><td>现金</td><td>投币口不找零，旁边有<b>换零钱的机器</b>（1,000 日元纸币可换）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>京都巴士旺季极堵，能坐地铁 / 电车就别坐巴士。</b>这次行程基本都避开了巴士。</div>
+
+    <h3>出租车</h3>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td>起步</td><td>约 500&ndash;600 日元（1 公里多），之后跳表比国内快</td></tr>
+          <tr><td><b>车门</b></td><td><b>后门自动开关，别自己动手拉</b></td></tr>
+          <tr><td>付款</td><td>多数能刷卡 / IC / 支付宝微信</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip"><b>3 个人短距离（3 公里内）打车，常常比买 3 张车票还便宜</b>，别死磕公共交通。</div>
+
+    <h3>新干线：这趟其实用不上</h3>
+    <p>新干线是高铁，走<strong>专用轨道</strong>，连接城市之间（东京↔大阪 2 小时 20 分）。<strong>在车站里是独立的一块区域、有自己的闸机</strong>，别走错。</p>
+    <div class="tip">你们全程在关西，<b>唯一能用新干线的区间是 新大阪 ↔ 京都（14 分钟）</b>，但要另买特急券，比 JR 新快速（29 分钟、580 日元）贵三倍多，<b>不值</b>。<br />顺带：新干线部分车次<b>特大行李（三边和超 160cm）要预约专座</b>，普通铁路没这限制。</div>
+
+    <h3>几条实用规矩</h3>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td><b>女性専用車両</b></td><td>早晚高峰部分车厢限女性，车门和地面有粉色标识&mdash;&mdash;你们三个正好能用，高峰期舒服很多</td></tr>
+          <tr><td>手机</td><td>车厢内<b>不打电话</b>，调静音（マナーモード）</td></tr>
+          <tr><td>上车</td><td>站台上按地面箭头排队，<b>先下后上</b></td></tr>
+          <tr><td>扶梯</td><td><b>关西站右侧、走左侧</b>（和东京相反，别站错）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>查路线用什么</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>App</th><th>特点</th></tr></thead>
+        <tbody>
+          <tr><td><b>Google Maps</b></td><td>中文界面，直接给站台号和车种，够用</td></tr>
+          <tr><td><b>Yahoo!乗換案内</b></td><td>日本人自己用的，最准，能查末班车和临时列车，但<b>只有日文</b></td></tr>
+          <tr><td>Japan Transit Planner</td><td>有中文，功能介于两者之间</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip">查末班车的关键词是「<b>終電</b>」。</div>
+
+    <h3>最重要的一条：先查末班车</h3>
+    <p>日本大城市末班车大约 <strong>23:30&ndash;00:30</strong>，但<strong>乡下线路可能 19&ndash;20 点就收车</strong>。</p>
+    <div class="warn"><b>宫津就是活生生的例子</b>&mdash;&mdash;花火 20:35 结束，而回京都的最后一班车 19:05 就开走了。这是日本自由行最经典的翻车方式：以为「总有车回去」，结果没有。<br /><br /><b>每天出门前花 30 秒查一次当晚的末班车。这一条比什么攻略都管用。</b></div>
+
+    <h2 style="margin-top:2.2rem">这趟具体怎么坐</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>区间</th><th>怎么走</th><th>时间</th><th>参考￥</th><th>预订</th></tr></thead>
+        <tbody>
+          <tr><td>关西机场 → 环球影城</td><td>机场利木津巴士</td><td class="num">70′</td><td class="num">1,800</td><td>现场买</td></tr>
+          <tr><td>环球影城 → 难波</td><td>出租车</td><td class="num">25′</td><td class="num">4,000&ndash;5,000</td><td>&mdash;</td></tr>
+          <tr><td>大阪 → 京都</td><td><b>JR 京都线 新快速</b></td><td class="num">29′</td><td class="num">约 580</td><td>不用</td></tr>
+          <tr><td>京都站 → 伏见稻荷</td><td>JR 奈良线（稻荷站）</td><td class="num">5′</td><td class="num">约 150</td><td>不用</td></tr>
+          <tr><td>京都 → 岚山</td><td>JR 嵯峨野线</td><td class="num">15′</td><td class="num">约 240</td><td>不用</td></tr>
+          <tr><td><b>京都 → 天橋立/宫津</b></td><td><b>JR 特急はしだて</b></td><td class="num">约 2h</td><td class="num">约 5,000</td><td><b>必订</b></td></tr>
+          <tr><td>京都 → 天橋立（巴士）</td><td>丹海高速巴士</td><td class="num">125′</td><td class="num">约 2,900</td><td><b>必订</b></td></tr>
+          <tr><td>出町柳 → 貴船口</td><td>叡山電車（私铁）</td><td class="num">30′</td><td class="num">约 470</td><td>不用</td></tr>
+          <tr><td>京都 → 宇治</td><td>JR 奈良线 快速</td><td class="num">30′</td><td class="num">约 240</td><td>不用</td></tr>
+          <tr><td>宇治 → 奈良</td><td>JR 奈良线</td><td class="num">30′</td><td class="num">约 510</td><td>不用</td></tr>
+          <tr><td>奈良 → 京都</td><td>JR 奈良线 快速</td><td class="num">45′</td><td class="num">约 720</td><td>不用</td></tr>
+          <tr><td>京都 → 关西机场</td><td><b>JR 特急 HARUKA</b></td><td class="num">80′</td><td class="num">约 3,600</td><td>建议订</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.8rem;color:var(--ink-3)">费用为参考值，日本会调价，以购票当时为准。</p>
+    <div class="tip"><b>周游券大概率不用买</b>——JR 使用集中在 8/16、8/17（宫津往返）、8/18（宇治 + 奈良）、8/19（HARUKA）。<b>注意 JR 关西周游券不覆盖京都丹後鉄道那段</b>（宫津、天橋立属于丹鉄），8/17 贵船走的叡山電車也不在范围内，单买更省心。<br />可以考虑 8/13 的<b>大阪地铁一日券</b>，如果当天在梅田↔心斋桥↔难波之间来回跑。</div>
 
     <h2 style="margin-top:2.2rem">预算参考</h2>
     <p style="font-size:.85rem;color:var(--ink-3)">每人 · 不含机票 · 不含购物 · 按 1 元 ≈ 20 日元粗算</p>
@@ -1104,13 +1265,16 @@
       <table>
         <thead><tr><th>项目</th><th>金额（元）</th><th>说明</th></tr></thead>
         <tbody>
-          <tr><td>住宿 8 晚（3 人分摊）</td><td class="num">5,000 &ndash; 9,000</td><td>盂兰盆溢价，京都 8/15&ndash;16 是大头</td></tr>
+          <tr><td>京都 / 大阪住宿 8 晚（3 人分摊）</td><td class="num">5,000 &ndash; 9,000</td><td>盂兰盆溢价；8/16 京都的房不退，等于多付一晚</td></tr>
+          <tr><td><b>宫津 / 天橋立 8/16 一晚</b></td><td class="num">400 &ndash; 900</td><td>花火当晚 + 盂兰盆，温泉旅馆更贵</td></tr>
+          <tr><td><b>宫津往返特急（指定席）</b></td><td class="num">500 &ndash; 550</td><td>单程约 5,000 日元 &times; 2</td></tr>
           <tr><td>USJ 门票 + Express Pass</td><td class="num">1,300 &ndash; 2,000</td><td>高峰日 EP 浮动很大</td></tr>
-          <tr><td>贵船川床午餐</td><td class="num">500 &ndash; 950</td><td>流水素面约 150</td></tr>
+          <tr><td>贵船川床午餐</td><td class="num">500 &ndash; 950</td><td></td></tr>
           <tr><td>市内交通 + HARUKA</td><td class="num">600</td><td></td></tr>
           <tr><td>餐饮 8 天</td><td class="num">2,500 &ndash; 4,000</td><td></td></tr>
-          <tr><td><b>小计</b></td><td class="num"><b>10,000 &ndash; 16,500</b></td><td></td></tr>
+          <tr><td><b>小计</b></td><td class="num"><b>10,800 &ndash; 18,000</b></td><td></td></tr>
           <tr><td>增永镜架 1 副</td><td class="num">1,800 &ndash; 4,000</td><td>看款式，不含镜片</td></tr>
+          <tr><td>（若改包车去宫津）</td><td class="num">+1,300 &ndash; 2,000</td><td>全天 8&ndash;12 万日元/车，3 人分摊，可省一晚住宿</td></tr>
         </tbody>
       </table>
     </div>
@@ -1138,18 +1302,24 @@
     <h2 style="margin-top:2.2rem">出发前待办</h2>
     <p style="font-size:.85rem;color:var(--ink-3)">勾选状态存在这台设备上</p>
     <ul class="todo" id="todo">
-      <li><label><input type="checkbox" data-k="t1" /><span class="txt">京都 8/14&ndash;8/18 住宿，尤其 8/15、8/16</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t13" /><span class="txt"><b>8/16 宫津 / 天橋立 住宿</b>（订不到往福知山、与謝野、京丹後、西舞鶴扩）</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t14" /><span class="txt"><b>特急「はしだて」指定席 &times; 2</b>（8/16 去 + 8/17 回）</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t1" /><span class="txt">京都 8/14&ndash;8/18 住宿（8/16 那晚也别退）</span><span class="due now">今天</span></label></li>
       <li><label><input type="checkbox" data-k="t2" /><span class="txt">USJ 8/12 门票 + Express Pass</span><span class="due now">今天</span></label></li>
-      <li><label><input type="checkbox" data-k="t3" /><span class="txt">贵船川床 8/17 午餐预约</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t3" /><span class="txt">贵船川床 8/17 午餐预约（订 13:30 那轮）</span><span class="due now">今天</span></label></li>
+      <li><label><input type="checkbox" data-k="t15" /><span class="txt">宫津花火 观赏船（天橋立桟橋 19:20 集合）</span><span class="due">3 天内</span></label></li>
       <li><label><input type="checkbox" data-k="t4" /><span class="txt">USJ 中文管家 / 代排服务确认</span><span class="due">3 天内</span></label></li>
       <li><label><input type="checkbox" data-k="t5" /><span class="txt">WiFi 蛋 / eSIM 下单，顺丰寄到家</span><span class="due">3 天内</span></label></li>
       <li><label><input type="checkbox" data-k="t6" /><span class="txt">8/19 HARUKA 指定席</span><span class="due">3 天内</span></label></li>
       <li><label><input type="checkbox" data-k="t7" /><span class="txt">8/15 嵯峨野小火车 指定席</span><span class="due">3 天内</span></label></li>
+      <li><label><input type="checkbox" data-k="t16" /><span class="txt">若选包车去宫津：联系包车公司报价</span><span class="due">3 天内</span></label></li>
       <li><label><input type="checkbox" data-k="t8" /><span class="txt">跨境专车（8/11 去 HKG）</span><span class="due">出发前</span></label></li>
       <li><label><input type="checkbox" data-k="t9" /><span class="txt">现有眼镜度数 + 瞳距 PD 拍照存手机</span><span class="due">出发前</span></label></li>
       <li><label><input type="checkbox" data-k="t10" /><span class="txt">Visit Japan Web 入境登记</span><span class="due">出发前</span></label></li>
+      <li><label><input type="checkbox" data-k="t17" /><span class="txt">装好 Google Maps + Yahoo!乗換案内，学会查「終電」</span><span class="due">出发前</span></label></li>
       <li><label><input type="checkbox" data-k="t11" /><span class="txt">浴衣体验预约</span><span class="due">出发前</span></label></li>
       <li><label><input type="checkbox" data-k="t12" /><span class="txt">热门餐厅（蟹道乐、鸭川纳凉床、和牛）</span><span class="due">出发前</span></label></li>
+      <li><label><input type="checkbox" data-k="t18" /><span class="txt">出发前一周再确认丹鉄官网的花火当天时刻表 PDF</span><span class="due">出发前</span></label></li>
     </ul>
 
     <h2 style="margin-top:2.2rem">和原方案的差异</h2>
@@ -1160,7 +1330,9 @@
           <tr><td>删掉神户</td><td>9 天塞进 USJ 全日 + 京都 5 晚，神户只能走马观花</td></tr>
           <tr><td>删掉大阪城 / 黑门市场 / 通天阁 / 阿倍野</td><td>大阪只剩 8/13 一个整天，诉求是购物，就全给购物和眼镜</td></tr>
           <tr><td>伏见稻荷 上午 → 下午 15:30</td><td>8 月上午晒到走不动，下午 3 点后人反而更少、光线更好</td></tr>
-          <tr><td>8/16 花火大会 → 五山送り火</td><td>2026 年京阪没有 8 月中旬的花火大会</td></tr>
+          <tr><td><b>8/16 改成京都 → 宫津，并在当地过夜</b></td><td>回京都末班 19:05 就开走、花火 19:50 才开始，<b>当晚回不去</b></td></tr>
+          <tr><td>8/17 改成「上午回京都 + 下午贵船」</td><td>上午在特急上，川床订位从 11:30 挪到 13:30</td></tr>
+          <tr><td>8/17 的「贵船→鞍马徒步」取消</td><td>上午赶路后没时间；想爬山就和 8/15 岚山对调</td></tr>
           <tr><td>宇治和奈良合并到 8/18</td><td>两地在同一条 JR 线上，先宇治后奈良刚好顺路</td></tr>
           <tr><td>岚山从半天扩到整天</td><td>竹林要早起、小火车 + 保津川要占半天，切碎了反而都做不好</td></tr>
         </tbody>
@@ -1172,7 +1344,13 @@
     <p>行程据 2026 年 8 月公开信息整理；营业时间、活动日期、票价请在出行前以官方渠道复核。</p>
     <p style="margin-top:.9rem"><strong>参考来源</strong></p>
     <ul>
-      <li><a href="https://ja.kyoto.travel/event/major/okuribi/">京都五山送り火｜京都市公式 京都観光Navi</a></li>
+      <li><a href="https://www.amanohashidate.jp/event/miyazu-toro2026/">宮津燈籠流し花火大会 2026｜天橋立観光協会</a></li>
+      <li><a href="https://miyazu-cci.or.jp/hanabi">宮津燈籠流し花火大会｜宮津商工会議所</a></li>
+      <li><a href="https://trains.willer.co.jp/info/miyazu-hanabi-2024/">花火大会に関する列車時刻｜京都丹後鉄道</a></li>
+      <li><a href="https://hashidate.mi-ktt.ne.jp/time/">特急はしだて 時刻表・乗車ガイド</a></li>
+      <li><a href="https://www.navitime.co.jp/diagram/depArrTimeList?departure=00006428&amp;arrival=00001756&amp;line=00000847&amp;updown=0">天橋立 → 京都 はしだて 時刻表｜NAVITIME</a></li>
+      <li><a href="https://www.tankai.jp/highwaybus/kyotoline/">高速バス 京都線｜丹後海陸交通</a></li>
+      <li><a href="https://www.amanohashidate.jp/taiken/amanohashidate-sanbashi/">宮津燈籠流し花火大会 鑑賞船｜天橋立観光協会</a></li>
       <li><a href="https://hanabi.walkerplus.com/list/ar0700/">関西の花火大会 2026｜ウォーカープラス</a></li>
       <li><a href="https://ja.kyoto.travel/event/single.php?event_id=4453">貴船の川床｜京都市公式 京都観光Navi</a></li>
       <li><a href="https://www.masunaga-opt.co.jp/store/kitte">MASUNAGA1905 KITTE大阪店｜増永眼鏡</a></li>
