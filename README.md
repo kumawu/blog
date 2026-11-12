@@ -25,6 +25,8 @@ A 3-part essay series running from a quantum-physics metaphor (Wheeler's delayed
 
 | 中文 | English | Notes · 备注 |
 |---|---|---|
+| [压缩的每一层：AI 的成长与人格推演](./压缩的每一层：AI的成长与人格推演.md) | [Every Layer of Compression — Projecting AI Growth and Personality](./Every-Layer-of-Compression.md) | 从一封客户投诉邮件出发，推演压缩和释放信息如何一层层往上走：从模型、AI Agent、多个 AI Agent 到带着意图行动，再到疼痛带来的成长和 AI 的人格化 |
+| [从压缩到疼痛：AI 记忆的下一层](./从压缩到疼痛：AI记忆的下一层.md) | [From Compression to Pain — The Next Layer of AI Memory](./From-Compression-to-Pain.md) | 从 LLM 压缩信息到压缩意图；奖励和疼痛的区别，给 AI 设计利害关系，以及失败档案、压缩教训、后台整理三层记忆 |
 | [把不确定变成确定——AI 的第四个阶段](./把不确定变成确定——AI的第四个阶段.md) | [Turning Uncertainty into Certainty — The Fourth Stage of Working with AI](./Turning-Uncertainty-into-Certainty.md) | 四个阶段：从你说一句它做一件，到 AI 自主地把不确定变成确定；以及走到这一步要先建好的六样基础 |
 | [我是 AI 系统里最大的瓶颈](./我是AI系统里最大的瓶颈.md) | _(中文 only)_ | 当 Agent 越来越强，人在 AI 系统里慢慢成了瓶颈本身 |
 | [局部自动化的错觉——从一杯奶茶到企业用 AI](./局部自动化的错觉——从一杯奶茶到企业用AI.md) | [The Illusion of Local Automation — From a Cup of Milk Tea to How Companies Use AI](./The-Illusion-of-Local-Automation.md) | 从一家奶茶店出发：每个环节都自动化，却仍靠人工串联，整体效率为何没提升 |
